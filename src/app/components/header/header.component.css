@@ -1,0 +1,100 @@
+/*______________________Header Top______________________________*/
+header{
+    background-color: blue;
+    width: auto;
+    height:80px;
+}
+
+header .header-top{
+    background: #262626;
+    height: 30px;
+    color: #fff;
+}
+
+.header-button-login{
+    background-color: #262626;
+    width: 40px;
+    height: 30px;
+    color: #21DBAA;
+    border: none;
+    float: right;
+    margin-right: 20px;
+}
+
+.user-icon{
+    background-color: #262626;
+    width: 30px;
+    margin: 0px;
+    height: 25px;   
+    text-align: center;
+}
+
+
+/*___________________Header bottom_______________________________*/
+
+
+header .header-bottom{
+    color: #fff;
+    height: 50px;
+    background-color: #191919;
+}
+
+.nav{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-row{
+    height: 50px;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.nav-home:hover{
+    background-color: black;
+}
+
+.nav-home{
+    color: #21DBAA;
+    padding: 12px 1px 17px 1px;
+}
+
+.icon-home{
+    background-color: #191919;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-home:hover{
+    background-color: black;
+}
+
+.nav-menu{
+    height: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.nav-ul{
+    list-style: none;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:10px;
+}
+.nav-li{
+    margin-right: 10px;
+    padding:10px;
+}
+
+.nav-li-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+i{
+    background-color: #191919;
+    color: #21DBAA;
+}

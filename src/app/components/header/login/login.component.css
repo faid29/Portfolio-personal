@@ -1,0 +1,120 @@
+.login-icon {	
+    float: right;
+    margin-top: 2px;
+    margin-right: 20px;
+    border: none;
+}
+/* #Modal dialog
+================================================== */
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+/*	.modalDialog img {
+    width: 95%;
+
+}*/
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modalDialog>div {
+    width: 40%;
+    position: relative;
+    margin: 25vh auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #262626
+}
+
+
+/* #LOGIN FORM
+================================================== */
+
+.login-container {
+    width: 25%;
+    border: 5px #999;
+}
+
+.login {
+    background-color: #199c79;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    clear: both;
+}
+
+.login:hover{
+    background-color: #1ca37f;
+}
+.login-info input[type="text"], .login-info input[type="password"] {
+    background-color: #fff;
+    text-align: center;
+    width: 96%;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    height: 30px;
+    padding: 6px 0 2px 5px;
+    margin: 8px;
+}
+.login-info input[type="text"]:focus, .login-info input[type="password"]:focus {
+    border: 1px solid #10a7d5;
+    background-color: #fff7e6;
+    outline: 0;
+}
+.login-info {padding-bottom: 5%;}
+
+.login-modal-close {
+    font-size: 15px;
+    padding: 5px 10px;
+    width: auto;
+    background-color: #199c79;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login-modal-close:hover {
+    background-color: #1ca37f;
+}
+.login-bottom-container {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+span.psw {
+    padding-top: 16px;
+}
+
+ul{
+    list-style: none;
+}
+
+.user-icon{
+    color: #21DBAA;
+    width: 25px;
+    margin: 0px;
+    height: 20px;   
+    text-align: center;
+    font-size: 1rem;
+}
+
+/*_____________formulario_---------------------*/
+
+.grupo-form{
+    margin: 3;
+}

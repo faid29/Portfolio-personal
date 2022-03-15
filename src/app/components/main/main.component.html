@@ -1,34 +1,32 @@
 <main>
     <div class="grid">
         <div class="col">
-            <div class="div-title">
-                <h1 class="title-h1">Hola, soy <br> Rubén I Sarco</h1>
-                <p class="title-p">Desarrollador web</p>
+            <div *ngFor="let data of dataTitle" class="div-title">
+                <h1 class="title-h1">{{data.titulo1}} <br>{{data.titulo2}} </h1>
+                <p class="title-p">{{data.parrafo}} </p>
             </div>
         </div>
-        <div class="col">
+        <div class="col  col1">
             <div class="div-section" >
                 <section class="section">
                     <ul class="ul">
-                        <li class="li"><button class="button-heart"><i class="bi bi-heart-fill"></i></button> Like</li>
+                        <li class="li"><button (click)="contador = contador+1" class="button-heart"><i [ngStyle]="{color: contador?'red':'#00000'}" class="bi bi-heart-fill"></i></button> {{contador}} </li>
                         <li class="li"><button class="button-chat"><i class="bi bi-chat-left-fill"></i></button> Comenta</li>
                         <li class="li"><button (click)="showShare=!showShare" class="button-share"><i class="bi bi-share-fill"></i></button> Comparte</li>
                     </ul>
                 </section>
             </div>
-            <div class="share">
-                <ul *ngIf="showShare" class="ul ul-share">
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>Facebook</li>
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/fluency/48/000000/linkedin.png"/></a>Linkedln</li>
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/fluency/48/000000/github.png"/></a>Git</li>
-                </ul>
-                <ul *ngIf="showShare" class="ul ul-share">
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/fluency/48/000000/google-plus.png"/></a>Google</li>
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/fluency/48/000000/whatsapp.png"/></a>Whatsapp</li>
-                    <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="https://img.icons8.com/color/48/000000/telegram-app--v3.png"/></a>Telegram</li>
-                </ul>
+            <div *ngIf="showShare" class="share">
+                <div class="share-col">
+                    <ul *ngFor="let data of dataShare" class="ul ul-share">
+                        <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="{{data.url}}"/></a>{{data.titulo}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    <app-acerca-de></app-acerca-de>
+    <app-exp-laboral></app-exp-laboral>
+    <app-educacion></app-educacion>
 </main>
 

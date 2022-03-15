@@ -1,0 +1,36 @@
+.acerca{
+    background-color: #161616;
+    display: grid;
+    grid-template-columns: 35% 70%;
+    grid-template-rows: auto;
+}
+
+h5{
+    font-size: 1rem;
+}
+
+.foto-perfil{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    margin: 20px 10px 20px 20px;
+    text-align: center;
+}
+
+.informacion{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    margin: 20px 100px 20px 0px;
+    text-align: center;
+}
+
+button, input{
+    color:#fff;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+}

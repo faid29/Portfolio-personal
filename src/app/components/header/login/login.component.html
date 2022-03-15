@@ -1,0 +1,18 @@
+<div class="login-icon">
+			<a href="#openLoginModal" class="link-icon"><i class="bi bi-person-circle user-icon"></i></a>
+</div><!-- login Modal starts here    ================================================== -->
+<div class="modalDialog" id="openLoginModal">
+	<div class="login-container">
+		<div class="login-info">
+			<form autocomplete="off" (ngSubmit)="enviar()"  [formGroup]="f" action="">
+				<label><b>Email</b></label> <input name="uname" placeholder="Ingrese su email" required="" type="text">
+				<label><b>Password</b></label> <input autocomplete="on" name="psw" placeholder="Ingrese su password" required="" type="password">
+				<button class="login" type="submit">Entrar</button>
+				<div class="login-bottom-container">
+					<span class="psw">Olvidó <a href="#">password?</a> &nbsp; &#124; &nbsp; Crear <a href="#openLoginModal-register">Cuenta</a></span>
+				</div><a class="login-modal-close" href="#close">Cancel</a>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- ______________________________registro de usuario____________________________________________________ -->

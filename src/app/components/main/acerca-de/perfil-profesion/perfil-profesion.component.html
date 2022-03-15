@@ -1,0 +1,17 @@
+<input type="checkbox" id="button-modal-profesion">
+<label for="button-modal-profesion" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <label for="button-modal-profesion"><i class="bi bi-x-square i-close"></i></label>
+        <div class="contenido">
+            <button (click)="Modificar()">Modificar</button>
+            <button (click)="Guardar()">Guardar</button>
+        </div>
+        <div class="form-profesion">
+            <form action="Post">
+                <label for="">Titulo Profesion</label>
+                <input type="text" name="nombre" id="nombre">
+            </form>
+        </div>
+    </div>
+</div>

@@ -3,15 +3,38 @@ main{
 }
 
 .grid{
-    height: 100vh;
+    height: 87vh;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100vh;
+
+    /*_________background gradiente________________*/
+
+    background: linear-gradient(-45deg, #262626, #151515, #191919, #21DBAA);
+    text-align: center;
+    background-size: 400% 400%;
+    animation: changeBG 20s ease infinite;
+    color: #fff;
 }
+
+@keyframes changeBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+/*_________termina el background gradiente________________*/
 
 .col{
     padding: 1em;
     gap: 2px;
+    height: 87vh;
 }
 
 .div-title{
@@ -41,6 +64,7 @@ main{
 
 .ul{
     list-style: none;
+    text-align: justify;
 }
 
 .li{
@@ -55,15 +79,22 @@ button{
 }
 
 /*_________________________________Button shared/like/coment_____________________________*/
+
+
 .share{
     background-color: #262626;
     margin-left: 20vw;
-    width: 20vw;
+    width: auto;
     border-radius: 5px;
 }
 
+.share-col{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: auto;
+}
+
 .ul-share{
-    display: flex;
     margin-bottom: 0;
 }
 
@@ -74,8 +105,6 @@ button{
     color: #fff;
     font-size: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 
 .share-link{
@@ -87,3 +116,147 @@ button{
     width: 40px;
 }
 
+
+/*::::::::::::::::::::::::::::::::::::::::MEDIA QUERY::::::::::::::::::::::::::::::::::::::::*/
+
+@media screen and (max-width: 1200px){
+    
+    .title-h1{
+        font-size: 4rem;
+    }
+    
+    .title-p{
+        font-size: 1.3rem;
+    }
+    
+    .div-section{
+        margin-left: 11vw;
+    }
+    
+    .li{
+        font-size: 0.8rem;
+    }
+
+    button{
+        font-size: 1.5rem;
+    }
+    
+    /*_________________________________Button shared/like/coment_____________________________*/
+    
+    .share{
+        background-color: #262626;
+        margin-left: 14vw;
+        width: auto;
+        border-radius: 5px;
+    }
+    
+    .img-share{
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    
+    .title-h1{
+        font-size: 3.1rem;
+    }
+
+    /*_________________________________Button shared/like/coment_____________________________*/
+
+    .share{
+        margin-left: 11vw;
+        width: 220px;
+    }
+    
+    .share-col{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: auto;
+    }
+
+    .img-share{
+        width: 22px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    main{
+        color: #fff;
+    }
+    
+    .grid{
+        height: 87vh;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 100vh;
+    
+    }
+    
+    .div-title{
+        margin-top: 20vh;
+        margin-left: 2vw;
+        text-align:left;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .title-h1{
+        font-size: 2rem;
+    }
+    
+    .title-p{
+        font-size: 0.7rem;
+    }
+    
+    .div-section{
+        margin-top: 20vh;
+        margin-left: 0;
+        margin-bottom: 5px;
+        padding-bottom: 1px;
+        width: 30vw;
+        border-radius: 5px;
+    }
+    
+    .ul{
+        padding-left: 0;
+    }
+    
+    .li{
+        font-size: 0.5rem;
+    }
+    
+    button{
+        font-size: 0.8rem;
+        border-radius: 3px;
+    }
+    
+    /*_________________________________Button shared/like/coment_____________________________*/
+    
+    .share{
+        margin-left: 0vw;
+        width: 100px;
+    }
+
+    .share-col{
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-template-rows: auto;
+    }
+    
+    .ul-share{
+        margin-bottom: 0;
+        padding-left: 4px;
+    }
+    
+    .li-share{
+        margin-right: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 0.4rem;
+    }
+
+    .img-share{
+        width: 15px;
+    } 
+}

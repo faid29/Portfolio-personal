@@ -1,0 +1,18 @@
+<input type="checkbox" id="button-modal">
+<label for="button-modal" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <label for="button-modal"><i class="bi bi-x-square i-close"></i></label>
+        <div class="contenido">
+            <div>
+                <div class="button-file">
+                    <input type="file">
+                </div>
+                <div class="button-file">
+                    <button (click)="eliminar()">Eliminar</button>
+                    <input type="button" (click)="uploadFile()" value="subir">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

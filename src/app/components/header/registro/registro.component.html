@@ -1,0 +1,134 @@
+<div class="modalDialog" id="openLoginModal-register">
+	<div class="login-container">
+		<div class="login-info">
+			<form [formGroup]="f"  (ngSubmit)="enviarRf()" autocomplete="off" method="POST">
+				<div grupo-form>
+					<label for="nombre-rf">Nombre</label> 
+					<input 
+					id="nombre-rf" 
+					type="text"
+					formControlName="nombre" 
+					placeholder="Ingrese su Nombre">
+				</div>
+                    <!-- mensaje de validadcion -->
+					<div class="alerta">
+						<div *ngIf="f.get('nombre')?.touched && f.get('nombre')?.errors?.['required']" class="alerta">Campo requerido</div>
+						<div *ngIf="f.get('nombre')?.touched && f.get('nombre')?.errors?.['minlength']">El campo Nombre debe tener al menos {{f.get('nombre')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+						<div *ngIf="f.get('nombre')?.touched && f.get('nombre')?.errors?.['maxlength']">El Nombre no puede tener mas de 20 caracteres </div>
+					</div>
+                <div grupo-form>
+					<label for="apellido">Apellido</label> 
+					<input 
+					id="apellido" 
+					type="text"
+					formControlName="apellido" 
+					placeholder="Ingrese su Apellido" >
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('apellido')?.touched && f.get('apellido')?.errors?.['required']" class="alerta">Campo requerido</div>
+					<div *ngIf="f.get('apellido')?.touched && f.get('apellido')?.errors?.['minlength']">El campo Apellido debe tener al menos {{f.get('apellido')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+					<div *ngIf="f.get('apellido')?.touched && f.get('apellido')?.errors?.['maxlength']">El Apellido no puede tener mas de 20 caracteres </div>
+				</div>
+                <div grupo-form>
+					<label for="email">Email</label> 
+					<input 
+					id="email" 
+					type="email" 
+					formControlName="email" 
+					placeholder="Ingrese su Email" 
+					>
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('email')?.touched && f.get('email')?.errors?.['required']" class="alerta">Campo requerido, ingrese un email</div>
+				</div>
+                <div grupo-form>
+					<label for="password">Password</label> 
+					<input 
+					id="password" 
+					type="password"
+					formControlName="password" 
+					placeholder="Ingrese su password" autocomplete="on">
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('password')?.touched && f.get('password')?.errors?.['required']" class="alerta">Campo requerido, ingrese un password</div>
+				</div>
+                <div grupo-form>
+					<label for="telefono">Teléfono</label> 
+					<input 
+					id="telefono" 
+					type="tex" 
+					formControlName="telefono" 
+					placeholder="Ingrese su teléfono" >
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('telefono')?.touched && f.get('telefono')?.errors?.['required']" class="alerta">Campo requerido</div>
+				</div>
+                <div grupo-form>
+					<label for="pais">pais</label> 
+					<input 
+					id="pais" 
+					type="text"
+					formControlName="pais" 
+					placeholder="Ingrese su pais">
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('pais')?.touched && f.get('pais')?.errors?.['required']" class="alerta">Campo requerido</div>
+					<div *ngIf="f.get('pais')?.touched && f.get('pais')?.errors?.['minlength']">El campo pais debe tener al menos {{f.get('pais')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+					<div *ngIf="f.get('pais')?.touched && f.get('pais')?.errors?.['maxlength']">El pais no puede tener mas de 20 caracteres </div>
+				</div>
+                <div grupo-form>
+					<label for="ciudad">Ciudad</label> 
+					<input 
+					id="ciudad" 
+					type="text"
+					formControlName="ciudad" 
+					placeholder="Ingrese su ciudad">
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('ciudad')?.touched && f.get('ciudad')?.errors?.['required']" class="alerta">Campo requerido</div>
+					<div *ngIf="f.get('ciudad')?.touched && f.get('ciudad')?.errors?.['minlength']">El campo Ciudad debe tener al menos {{f.get('ciudad')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+					<div *ngIf="f.get('ciudad')?.touched && f.get('ciudad')?.errors?.['maxlength']">El Ciudad no puede tener mas de 20 caracteres </div>
+				</div>	
+                <div grupo-form>
+					<label for="direccion">Direccion</label> 
+					<input 
+					id="direccion" 
+					type="text" 
+					formControlName="direccion" 
+					placeholder="Ingrese su direccion">
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('direccion')?.touched && f.get('direccion')?.errors?.['required']" class="alerta">Campo requerido</div>
+					<div *ngIf="f.get('direccion')?.touched && f.get('direccion')?.errors?.['minlength']">El campo Dirección debe tener al menos {{f.get('direccion')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+					<div *ngIf="f.get('direccion')?.touched && f.get('direccion')?.errors?.['maxlength']">El Dirección no puede tener mas de 20 caracteres </div>
+				</div>
+                <div grupo-form>
+					<label for="edad">Edad</label> 
+					<input 
+					id="edad" 
+					type="text" 
+					formControlName="edad" 
+					placeholder="Ingrese su edad" >
+				</div>
+				<!-- mensaje de validadcion -->
+				<div class="alerta">
+					<div *ngIf="f.get('edad')?.touched && f.get('edad')?.errors?.['required']" class="alerta">Campo requerido, ingrese su edad</div>
+				</div>
+				<!-- button enviar -->
+				<button class="register"  [disabled]="f.invalid"  type="submit"  >Registrar</button>
+			</form>		
+			<div>{{ this.f.invalid }} </div>
+			<div class="login-bottom-container">
+				<span class="psw">Olvidó <a href="#">password?</a> &nbsp; &#124; &nbsp; Iniciar <a href="#openLoginModal">Sesión</a></span>
+			</div><a class="login-modal-close" href="#close">Cancel</a>
+
+		</div>
+	</div>
+</div>

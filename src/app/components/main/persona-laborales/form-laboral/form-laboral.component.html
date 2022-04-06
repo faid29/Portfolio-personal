@@ -1,0 +1,62 @@
+<div class="form-laboral">
+    <form #formLaboral [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+        <div class="div-laboral">
+            <label for="nombre_empresa">Nombre Empresa</label>
+            <input 
+            type="text"  
+            id="nombre_empresa"
+            class="form-control"
+            formControlName="nombre_empresa"
+            type="text"
+            ngbTooltip="Entre 3 y 60 caracteres"
+            >
+        </div>
+        <div class="div-laboral">
+            <label for="puesto">Puesto</label>
+            <input 
+            type="text"  
+            id="puesto"
+            class="form-control"
+            formControlName="puesto"
+            type="text"
+            ngbTooltip="Entre 3 y 60 caracteres"
+            >
+        </div>
+        <div class="div-laboral">
+            <label for="fecha_desde">Fecha desde</label>
+            <input 
+            type="text"  
+            id="fecha_desde"
+            class="form-control"
+            formControlName="fecha_desde"
+            type="text"
+            ngbTooltip="En formato dd/mm/yy"
+            >
+        </div>
+        <div class="div-laboral">
+            <label for="fecha_hasta">Fecha hasta</label>
+            <input 
+            type="text"  
+            id="fecha_hasta"
+            class="form-control"
+            formControlName="fecha_hasta"
+            type="text"
+            ngbTooltip="En formato dd/mm/yy"
+            >
+        </div>
+        <div class="div-laboral">
+            <label for="descripcion_laboral">Descripción laboral</label>
+            <input 
+            type="text"  
+            id="descripcion_laboral"
+            class="form-control"
+            formControlName="descripcion_laboral"
+            type="text"
+            ngbTooltip="debe tener mas de minimo 3 y 256 caracteres"
+            >
+        </div>
+        <button type="submit" [disabled]="form.invalid" >
+            guardar
+        </button>
+    </form>
+</div>

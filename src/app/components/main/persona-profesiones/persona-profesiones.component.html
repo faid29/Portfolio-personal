@@ -1,0 +1,20 @@
+<!-- profesion y formulario app -->
+<input type="checkbox" id="button-modal-profesion">
+<label for="button-modal-profesion" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-profesion" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-profesion"><button class="button-nueva" (click)="toggleForm()">Nueva Profesion</button></div> 
+        <app-form-profesion
+            #formProfesion
+            (nuevaProfesion)="crearNuevaProfesion($event)">
+        </app-form-profesion>
+        <app-profesion  
+            *ngFor="let profesion of profesiones"
+            [profesion]="profesion"
+            (borrarS)="borrarProfesion($event)"
+            (editarS)="editarProfesion($event)">
+        </app-profesion>
+    </div>
+</div>
+

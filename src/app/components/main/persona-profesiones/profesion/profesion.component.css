@@ -1,0 +1,45 @@
+
+.profesion{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profesion-title{
+    padding: 10px 10px;
+}
+
+
+.profesion-button{
+    margin:auto;
+}
+
+
+button{
+    
+    color:#fff;
+    margin-right: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 992px){
+
+    .profesion{
+        background-color: #191919;
+        border: 1px solid #262626;
+        border-radius: 5px;
+        margin: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+}

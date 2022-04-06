@@ -1,0 +1,25 @@
+<div class="form-skill">
+    <form #formSkill [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+        <div class="div-skill">
+            <label for="nombre_skill">Hablidad</label>
+            <input 
+            type="text"  
+            id="nombre_skill"
+            class="form-control"
+            formControlName="nombre_skill"
+            >
+        </div>
+        <div class="div-skill">
+            <label for="nivel">nivel</label>
+            <input 
+            type="number"  
+            id="nivel"
+            class="form-control"
+            formControlName="nivel"
+            >
+        </div>
+        <button type="submit" [disabled]="form.invalid" >
+            guardar
+        </button>
+    </form>
+</div>

@@ -1,9 +1,9 @@
 <main>
     <div class="grid">
         <div class="col">
-            <div *ngFor="let data of dataTitle" class="div-title">
-                <h1 class="title-h1">{{data.titulo1}} <br>{{data.titulo2}} </h1>
-                <p class="title-p">{{data.parrafo}} </p>
+            <div class="div-title">
+                <h1 class="title-h1">{{ dataTitle.titulo1}} {{ persona.nombre }}<br>{{ persona.apellido}} </h1>
+                <p class="title-p">{{ dataTitle.subtitulo}} </p>
             </div>
         </div>
         <div class="col  col1">
@@ -25,8 +25,94 @@
             </div>
         </div>
     </div>
-    <app-acerca-de></app-acerca-de>
-    <app-exp-laboral></app-exp-laboral>
-    <app-educacion></app-educacion>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PRFESION ::::::::::::::::::::::::::::::::::::::: -->
+    <div class="acerca">
+        <div class="foto-perfil">
+            <h5>{{persona.foto }} </h5>
+            <app-perfil-foto></app-perfil-foto>
+        </div>
+        <div class="informacion-profesional">
+            <div class="titulos-h5"><h5>Información profesional</h5></div>
+            <div class="vista-profesion" *ngFor="let profesion of persona.profesion">
+                <h4>{{profesion.titulo_profesion}}</h4>
+                <p>{{profesion.descripcion_profesion}}</p>
+            </div>
+            <div class="app-profesion" >
+                <app-persona-profesiones 
+                [profesiones]="persona.profesion">
+                </app-persona-profesiones>
+            </div>
+        </div>
+    </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::LABORAL ::::::::::::::::::::::::::::::::::::::: -->
+    <div class="container-laboral">
+        <div class="titulos-h5"><h5>Experiencia Laboral</h5></div>
+        <div class="col-laboral">
+                <div class="vista-laboral" *ngFor="let laboral of persona.laboral" >
+                    <p class="p"><b>Nobre de la empresa: </b>{{laboral.nombre_empresa}} </p>
+                    <p class="p"><b>Puesto: </b>{{laboral.puesto}}</p>
+                    <p class="p"><b>Fecha: </b>{{laboral.fecha_desde}} <b>Hasta: </b>{{laboral.fecha_hasta}}</p>
+                    <p class="p"><b>Tareas: </b>{{laboral.descripcion_laboral}} </p>
+                </div>
+        </div>
+        <div class="app-laboral">
+            <app-persona-laborales
+            [laborales]="persona.laboral" >
+            </app-persona-laborales>
+        </div>
+    </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::EDUCACIÓN::::::::::::::::::::::::::::::::::::::: -->
+    <div class="container-educacion">
+        <div class="titulos-h5"><h5>Educacion</h5></div>
+        <div class="col-educacion">
+            <div class="vista-educacion" *ngFor="let educacion of persona.educacion" >
+                <div> 
+                    <p class="p"><b>Nombre Institución: </b>{{educacion.nombre_institucion}} </p>
+                    <p class="p"><b>Nombre Certificación: </b>{{educacion.nombre_certificacion}}</p>
+                    <p class="p"><b>Fecha inicio: </b>{{educacion.fecha_inicio}} <b>fecha fin: </b>{{educacion.fecha_fin}}</p>
+                    <p class="p"><b>Estado: </b>{{educacion.estado}}</p>
+                    <p class="p"><b>Descripcion curso: </b>{{educacion.descripcion_curso}}</p>                  
+                </div>
+                <div img-div>
+                    <img class="img-institucion" src="{{educacion.imagen_institucion}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="app-educacion">
+            <app-persona-educaciones
+            [educaciones]="persona.educacion" >
+            </app-persona-educaciones>
+        </div>
+    </div>
+    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::IDIOMA ::::::::::::::::::::::::::::::::::::::: -->
+    <div class="container-idioma">
+        <div class="titulos-h5"><h5>Idiomas</h5></div>
+        <div class="col-idioma">
+            <div class="vista-idioma" *ngFor="let idioma of persona.idioma" >
+                <p class="p"><b>Idioma: </b>{{idioma.nombre_idioma}} </p>
+                <p class="p"><b>Nivel: </b>{{idioma.nivel_idioma}}</p>
+            </div>
+        </div>
+        <div class="app-idioma">
+            <app-persona-idiomas
+            [idiomas]="persona.idioma" >
+            </app-persona-idiomas>
+        </div>
+    </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::SKILL ::::::::::::::::::::::::::::::::::::::: -->
+    <div class="container-skill">
+        <div class="titulos-h5"><h5>Habilidades</h5></div>
+        <div class="col-skill">
+            <div class="vista-skill" *ngFor="let skill of persona.skill" >
+                <p class="p"><b>Habilidad: </b>{{skill.nombre_skill}} </p>
+                <p class="p"><b>Nivel: </b>{{skill.nivel}}</p>
+            </div>
+        </div>
+        <div class="app-skill"> 
+            <app-persona-skills
+            [skills]="persona.skill">
+            </app-persona-skills>
+        </div>
+    </div>
 </main>
 

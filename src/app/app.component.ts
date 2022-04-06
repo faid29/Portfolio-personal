@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PerfilService } from './services/perfil.service';
 
 
 @Component({
@@ -11,14 +10,11 @@ export class AppComponent implements OnInit {
   title = 'portafolio-ruben';
 
 
-  constructor(private perfilService: PerfilService){  
-    console.log("el componenente fue creado")
+  constructor(){  
   }
 
   ngOnInit(): void {
-    console.log("el componenete se ha inizializado")
-    this.perfilService.getPerfil()
-    .subscribe((response: any) => console.log(response));
+
   }
 
 

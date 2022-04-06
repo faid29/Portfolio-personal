@@ -1,30 +1,63 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/services/persona.service';
+
+
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css', './main.profesiones.component.css',
+             './main.laborales.component.css', './main.educaciones.component.css', 
+             './main.idiomas.component.css','./main.skills.component.css']
 })
+
+
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  persona: Persona = {id:0, nombre: '', apellido: '', email: '', password: '', telefono: '', pais: '', ciudad: '', estado_civil: '', direccion: '', edad: '', foto:'',
+     "profesion":[{id:0, titulo_profesion:'',descripcion_profesion:''}],
+     "laboral":[{id:0, nombre_empresa:'',puesto:'', fecha_desde:'',fecha_hasta:'', descripcion_laboral:''}],
+     "educacion":[{id:0, nombre_institucion:'', nombre_certificacion:'', fecha_inicio:'',fecha_fin:'', estado:'', descripcion_curso:'', imagen_institucion:''}],
+     "idioma":[{id:0, nombre_idioma:'', nivel_idioma:''}],
+     "skill":[{id:0, nombre_skill:'', nivel:0}],
+     "proyecto":[{id:0, titulo_proyecto:'', fecha_proyecto:'', imagen_proyecto:'', descripcion_proyecto:''}]
+    };
 
-  ngOnInit(): void {
+/*   skill: Skill = {id:0, nombre_skill:'', nivel:0} */
+ 
+  constructor( private personaService: PersonaService, /* private skillService: SkillService */){
+    this.getPersona()
+   /*  this.getSkill() */
+   }
+
+  ngOnInit(): void {}
+
+  getPersona(){
+    this.personaService.getPersona().subscribe( persona => {
+      this.persona = persona;
+    });
   }
 
+/*   getSkill(){
+    this.skillService.getSkill().subscribe( skill => {
+      this.skill = skill;
+    });
+  } */
+
+  
   showShare:boolean = false;
 
   contador:number = 0;
   
   estadoHeart:boolean = true;
 
-  dataTitle=[
+  dataTitle=
     {
       'titulo1':'Hola, soy',
-      'titulo2':'Rubén Sarco',
-      'parrafo':'Full Stack Developer Jr'
+      'subtitulo':'Full Stack Developer Jr'
     }
-  ]
+  
 
   dataShare=[
     {

@@ -59,7 +59,7 @@
 					<label for="telefono">Teléfono</label> 
 					<input 
 					id="telefono" 
-					type="tex" 
+					type="tel" 
 					formControlName="telefono" 
 					placeholder="Ingrese su teléfono" >
 				</div>
@@ -113,7 +113,7 @@
 					<label for="edad">Edad</label> 
 					<input 
 					id="edad" 
-					type="text" 
+					type="number" 
 					formControlName="edad" 
 					placeholder="Ingrese su edad" >
 				</div>
@@ -122,9 +122,8 @@
 					<div *ngIf="f.get('edad')?.touched && f.get('edad')?.errors?.['required']" class="alerta">Campo requerido, ingrese su edad</div>
 				</div>
 				<!-- button enviar -->
-				<button class="register"  [disabled]="f.invalid"  type="submit"  >Registrar</button>
+				<button class="button-register"  [disabled]="f.invalid"  type="submit"  >Registrar</button>
 			</form>		
-			<div>{{ this.f.invalid }} </div>
 			<div class="login-bottom-container">
 				<span class="psw">Olvidó <a href="#">password?</a> &nbsp; &#124; &nbsp; Iniciar <a href="#openLoginModal">Sesión</a></span>
 			</div><a class="login-modal-close" href="#close">Cancel</a>

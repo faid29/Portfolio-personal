@@ -1,0 +1,29 @@
+<div class="form-profesion">
+    <form #formProfesion [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+        <div class="div-profesion">
+            <label for="titulo_profesion">Titulo Profesion</label>
+            <input 
+            type="text"  
+            id="titulo_profesion"
+            class="form-control"
+            formControlName="titulo_profesion"
+            type="text"
+            ngbTooltip="Entre 3 y 60 caracteres"
+            >
+        </div>
+        <div class="div-profesion">
+            <label for="descripcion_profesion">Descripción Profesion</label>
+            <input 
+            type="text"  
+            id="descripcion_profesion"
+            class="form-control"
+            formControlName="descripcion_profesion"
+            type="text"
+            ngbTooltip="Entre 5 y 60 caracteres"
+            >
+        </div>
+        <button type="submit" [disabled]="form.invalid" >
+            guardar
+        </button>
+    </form>
+</div>

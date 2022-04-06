@@ -1,0 +1,18 @@
+<input type="checkbox" id="button-modal-skill">
+<label for="button-modal-skill" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-skill" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-skill"><button class="button-nueva" (click)="toggleForm()">Nuevo habilidad</button></div> 
+        <app-form-skill
+            #formSkill
+            (nuevaSkill)="crearNuevaSkill($event)">
+        </app-form-skill>
+        <app-skill  
+        *ngFor="let skill of skills"
+        [skill]="skill"
+        (borrarS)="borrarSkill($event)"
+        (editarS)="editarSkill($event)">
+        </app-skill>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="educacion">
+    <div class="educacion-title">
+        <p><b>Nombre Institucion: </b>{{educacion.nombre_institucion}}</p>
+        <p><b>Nombre Certificación: </b>{{educacion.nombre_certificacion}}</p>
+        <p><b>Fecha inicio: </b>{{educacion.fecha_inicio}} <b>Fecha finalización: </b>{{educacion.fecha_fin}}</p>
+        <p><b>Estado: </b>{{educacion.estado}}</p>
+        <p><b>Descripción curso</b>{{educacion.descripcion_curso}}</p>
+        <div class="img-institucion">
+            <img src="{{educacion.imagen_institucion}}" alt="">
+        </div>
+    </div>
+    <div >
+        <button (click)="borrarEducacion()">Eliminar</button><button (click)="editarEducacion()">Editar</button>
+    </div>
+</div>

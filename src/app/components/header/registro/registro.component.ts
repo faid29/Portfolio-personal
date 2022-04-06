@@ -39,13 +39,13 @@ export class RegistroComponent implements OnInit {
       nombre:['', Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(20)]) ],
       apellido:['',Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(20)])],
       email:['',Validators.compose([Validators.required, Validators.email ])],
-      password:['', Validators.required],
-      telefono:['', Validators.required],
+      password:['', [Validators.required]],
+      telefono:['', [Validators.required]],
       pais:['', Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20)])],
       ciudad:['', Validators.compose([Validators.required,Validators.minLength(3), Validators.maxLength(20)])],
-      estado_civil:['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20)])],
+      /* estado_civil:['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20)])], */
       direccion:['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(20)])],
-      edad:['',Validators.required]
+      edad:['',[Validators.required]]
     })
   }
 

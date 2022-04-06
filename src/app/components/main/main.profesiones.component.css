@@ -1,0 +1,56 @@
+.acerca{
+    background-color: #161616;
+    display: flex;
+    margin: 0;
+}
+
+h5{
+    font-size: 1rem;
+}
+
+.foto-perfil{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    margin: 20px 10px 20px 30px;
+    text-align: center;
+    width: 30vw;
+}
+
+.informacion-profesional{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    margin: 20px 30px 20px 0px;
+    text-align: center;
+    width: 65vw;
+}
+
+.vista-profesion{
+    margin-top: 20px;
+    border-bottom: 1px solid #515152;
+}
+.app-profesion{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::PROFESION MEQDIA QUERY:::::::::::::::::::::::::::::::::::::::*/
+@media screen and (max-width: 768px){
+    
+    .acerca{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .foto-perfil{
+        margin:20px 30px 20px 20px;
+        width: auto;
+    }
+    
+    .informacion-profesional{
+        margin-left: 20px;
+        width: auto;
+    }
+}

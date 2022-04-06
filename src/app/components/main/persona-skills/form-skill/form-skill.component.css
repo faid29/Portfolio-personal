@@ -1,0 +1,29 @@
+
+.form-skill{
+    margin: 20px 10px 10px 10px;
+}
+
+.div-skill{
+    margin-bottom: 20px;
+}
+
+input{
+    text-align: center;
+    color:#fff;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cecccc;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+button{
+    color:#fff;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+}

@@ -1,0 +1,28 @@
+<div class="form-idioma">
+    <form #formIdioma [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+        <div class="div-idioma">
+            <label for="nombre_idioma">Nombre Idioma</label>
+            <input 
+            type="text"  
+            id="nombre_idioma"
+            class="form-control"
+            formControlName="nombre_idioma"
+            >
+        </div>
+        <div class="div-idioma">
+            <label for="nivel_idioma">Nivel Idioma</label>
+            <select name="idioma"
+            id="nivel_idioma"
+            class="form-control"
+            formControlName="nivel_idioma">
+                <option>Principal</option>
+                <option>Basico</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="form.invalid" >
+            guardar
+        </button>
+    </form>
+</div>

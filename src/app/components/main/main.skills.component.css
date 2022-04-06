@@ -1,0 +1,45 @@
+.container-skill{
+    background-color: #191919;
+}
+
+.col-skill{
+
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.vista-skill{
+    display: flex;
+    flex-direction: row;
+    text-align:left;
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+
+.img-inskill{
+    object-fit: contain;
+    max-width: 100px;
+    margin-top: 50px;
+}
+
+
+
+.app-skill{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .vista-skill{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}

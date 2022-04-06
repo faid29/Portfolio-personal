@@ -1,0 +1,18 @@
+<input type="checkbox" id="button-modal-educacion">
+<label for="button-modal-educacion" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-educacion" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-educacion"><button class="button-nueva" (click)="toggleForm()">Nuevo Educacion</button></div> 
+        <app-form-educacion
+            #formEducacion
+            (nuevaEducacion)="crearNuevaEducacion($event)">
+        </app-form-educacion>
+        <app-educacion  
+            *ngFor="let educacion of educaciones"
+            [educacion]="educacion"
+            (borrarS)="borrarEducacion($event)"
+            (editarS)="editarEducacion($event)">
+        </app-educacion>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<input type="checkbox" id="button-modal-laboral">
+<label for="button-modal-laboral" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-laboral" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-laboral"><button class="button-nueva" (click)="toggleForm()">Nuevo laboral</button></div> 
+        <app-form-laboral
+            #formLaboral
+            (nuevaLaboral)="crearNuevaLaboral($event)">
+        </app-form-laboral>
+        <app-laboral  
+            *ngFor="let laboral of laborales"
+            [laboral]="laboral"
+            (borrarS)="borrarLaboral($event)"
+            (editarS)="editarLaboral($event)">
+        </app-laboral>
+    </div>
+</div>

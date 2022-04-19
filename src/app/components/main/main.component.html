@@ -5,6 +5,24 @@
                 <h1 class="title-h1">{{ dataTitle.titulo1}} {{ persona.nombre }}<br>{{ persona.apellido}} </h1>
                 <p class="title-p">{{ dataTitle.subtitulo}} </p>
             </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PERSONA ::::::::::::::::::::::::::::::::::::::: -->
+            <input type="checkbox" id="button-modal-persona">
+            <label for="button-modal-persona" class="label-modal">Editar Perfil<i class="bi bi-pencil-fill"></i></label>
+            <div class="modal">
+                <div class="contenedor">
+                    <div><button class="button-close"><label for="button-modal-persona" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+                    <div class="nueva-persona"><button class="button-nueva" (click)="toggleForm()">Nuevo Persona</button></div> 
+                    <app-persona  
+                        [persona]="persona"
+                        (borrarS)="borrarPersona($event)"
+                        (editarS)="editarPersona($event)">
+                    </app-persona>
+                    <app-form-persona
+                    #formPersona
+                    (nuevaPersona)="crearNuevaPersona($event)">
+                </app-form-persona>
+                </div>
+            </div>
         </div>
         <div class="col  col1">
             <div class="div-section" >
@@ -48,12 +66,12 @@
     <div class="container-laboral">
         <div class="titulos-h5"><h5>Experiencia Laboral</h5></div>
         <div class="col-laboral">
-                <div class="vista-laboral" *ngFor="let laboral of persona.laboral" >
-                    <p class="p"><b>Nobre de la empresa: </b>{{laboral.nombre_empresa}} </p>
-                    <p class="p"><b>Puesto: </b>{{laboral.puesto}}</p>
-                    <p class="p"><b>Fecha: </b>{{laboral.fecha_desde}} <b>Hasta: </b>{{laboral.fecha_hasta}}</p>
-                    <p class="p"><b>Tareas: </b>{{laboral.descripcion_laboral}} </p>
-                </div>
+            <div class="vista-laboral" *ngFor="let laboral of persona.laboral" >
+                <p class="p"><b>Nobre de la empresa: </b>{{laboral.nombre_empresa}} </p>
+                <p class="p"><b>Puesto: </b>{{laboral.puesto}}</p>
+                <p class="p"><b>Fecha: </b>{{laboral.fecha_desde}} <b>Hasta: </b>{{laboral.fecha_hasta}}</p>
+                <p class="p"><b>Tareas: </b>{{laboral.descripcion_laboral}} </p>
+            </div>
         </div>
         <div class="app-laboral">
             <app-persona-laborales
@@ -103,15 +121,75 @@
     <div class="container-skill">
         <div class="titulos-h5"><h5>Habilidades</h5></div>
         <div class="col-skill">
-            <div class="vista-skill" *ngFor="let skill of persona.skill" >
-                <p class="p"><b>Habilidad: </b>{{skill.nombre_skill}} </p>
-                <p class="p"><b>Nivel: </b>{{skill.nivel}}</p>
+            <div class="vista-skill" *ngFor="let skill of persona.skill" [ngStyle]="{'border-color':skill.color_skill}">
+                <div ></div>
+                <p class="p-nombre-skill">{{skill.nombre_skill}}</p>
+                <p class="p-nivel-skill">{{skill.nivel}}0%</p>
+                <p class="p-porcentaje">0%<progress min="0" max="10" value="{{skill.nivel}}"></progress>100%</p> 
             </div>
         </div>
         <div class="app-skill"> 
             <app-persona-skills
             [skills]="persona.skill">
             </app-persona-skills>
+        </div>
+    </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PROYECTOS ::::::::::::::::::::::::::::::::::::::: -->
+    <div class="container-proyecto">
+        <div class="titulos-h5"><h5>Idiomas</h5></div>
+        <div class="col-proyecto">
+            <div class="vista-proyecto" *ngFor="let proyecto of persona.proyecto" >
+                <div>
+                    <p class="p"><b>Proyecto: </b>{{proyecto.titulo_proyecto}} </p>
+                    <p class="p"><b>Fecha: </b>{{proyecto.fecha_proyecto}}</p>
+                    <p class="p"><b>Descripcion: </b>{{proyecto.descripcion_proyecto}}</p>
+                </div>
+                <div id="slider">
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <input type="radio" name="slider" id="slide4">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide_1">
+                                   <div class="slide-content">
+                                       <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                   </div>
+                                </div>
+                                <div class="slide slide_2">
+                                   <div class="slide-content">
+                                        <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                   </div>
+                                </div>
+                                <div class="slide slide_3">
+                                    <div class="slide-content">
+                                        <img class="img-proyecto" src="https://marketing4ecommerce.net/wp-content/uploads/2018/01/Depositphotos_3667865_m-2015-compressor.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="slide slide_4">
+                                    <div class="slide-content">
+                                        <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                    </div>
+                    <div id="bullets">
+                       <label for="slide1"></label>
+                       <label for="slide2"></label>
+                       <label for="slide3"></label>
+                       <label for="slide4"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-proyecto">
+            <app-persona-proyectos
+            [proyectos]="persona.proyecto">  
+            </app-persona-proyectos>
         </div>
     </div>
 </main>

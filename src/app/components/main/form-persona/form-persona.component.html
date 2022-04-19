@@ -1,0 +1,143 @@
+<div class="form-persona" >
+<form #formPersona [formGroup]="form"  (ngSubmit)="onSubmit($event)" autocomplete="off" method="POST">
+	<div class="div-persona div-input">
+		<label for="nombre-rf">Nombre</label> 
+		<input 
+		id="nombre-rf" 
+		type="text"
+		formControlName="nombre" 
+		placeholder="Nombre">
+	</div>
+        <!-- mensaje de validadcion -->
+		<div class="alerta">
+			<div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']" class="alerta">Campo requerido</div>
+			<div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['minlength']">El campo Nombre debe tener al menos {{form.get('nombre')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+			<div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['maxlength']">El Nombre no puede tener mas de 20 caracteres </div>
+		</div>
+    <div class="div-persona div-input">
+		<label for="apellido-rf">Apellido</label> 
+		<input 
+		id="apellido-rf" 
+		type="text"
+		formControlName="apellido" 
+		placeholder="Apellido" >
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('apellido')?.touched && form.get('apellido')?.errors?.['required']" class="alerta">Campo requerido</div>
+		<div *ngIf="form.get('apellido')?.touched && form.get('apellido')?.errors?.['minlength']">El campo Apellido debe tener al menos {{form.get('apellido')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+		<div *ngIf="form.get('apellido')?.touched && form.get('apellido')?.errors?.['maxlength']">El Apellido no puede tener mas de 20 caracteres </div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="email">Email</label> 
+		<input 
+		id="email" 
+		type="email" 
+		formControlName="email" 
+		placeholder="Email" 
+		>
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']" class="alerta">Campo requerido, ingrese un email</div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="password">Password</label> 
+		<input 
+		id="password" 
+		type="password"
+		formControlName="password" 
+		placeholder="Password" autocomplete="on">
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']" class="alerta">Campo requerido, ingrese un password</div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="telefono">Teléfono</label> 
+		<input 
+		id="telefono" 
+		type="tel" 
+		formControlName="telefono" 
+		placeholder="Teléfono" >
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('telefono')?.touched && form.get('telefono')?.errors?.['required']" class="alerta">Campo requerido</div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="pais-rf">pais</label> 
+		<select name="pais"
+		id="pais-rf"
+		class="form-control"
+		formControlName="pais" >
+			<option selected>Argentina</option>
+			<option >Brasil</option>
+			<option >Chile</option>
+			<option >Estados Unidos</option>
+		</select>
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('pais')?.touched && form.get('pais')?.errors?.['required']" class="alerta">Campo requerido</div>
+		<div *ngIf="form.get('pais')?.touched && form.get('pais')?.errors?.['minlength']">El campo pais debe tener al menos {{form.get('pais')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+		<div *ngIf="form.get('pais')?.touched && form.get('pais')?.errors?.['maxlength']">El pais no puede tener mas de 20 caracteres </div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="ciudad">Ciudad</label> 
+		<input 
+		id="ciudad" 
+		type="text"
+		formControlName="ciudad" 
+		placeholder="Ciudad">
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('ciudad')?.touched && form.get('ciudad')?.errors?.['required']" class="alerta">Campo requerido</div>
+		<div *ngIf="form.get('ciudad')?.touched && form.get('ciudad')?.errors?.['minlength']">El campo Ciudad debe tener al menos {{form.get('ciudad')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+		<div *ngIf="form.get('ciudad')?.touched && form.get('ciudad')?.errors?.['maxlength']">El Ciudad no puede tener mas de 20 caracteres </div>
+	</div>	
+	<div class="div-persona div-input">
+		<label for="estado_civil">Estado civil</label> 
+		<input 
+		id="estado_civil" 
+		type="text"
+		formControlName="estado_civil" 
+		placeholder="Estado civil">
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('estado_civil')?.touched && form.get('estado_civil')?.errors?.['required']" class="alerta">Campo requerido</div>
+		<div *ngIf="form.get('estado_civil')?.touched && form.get('estado_civil')?.errors?.['minlength']">El campo Ciudad debe tener al menos {{form.get('estaod_civil')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+		<div *ngIf="form.get('estado_civil')?.touched && form.get('estado_civil')?.errors?.['maxlength']">El Ciudad no puede tener mas de 20 caracteres </div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="direccion">Direccion</label> 
+		<input 
+		id="direccion" 
+		type="text" 
+		formControlName="direccion" 
+		placeholder="Direccion">
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('direccion')?.touched && form.get('direccion')?.errors?.['required']" class="alerta">Campo requerido</div>
+		<div *ngIf="form.get('direccion')?.touched && form.get('direccion')?.errors?.['minlength']">El campo Dirección debe tener al menos {{form.get('direccion')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+		<div *ngIf="form.get('direccion')?.touched && form.get('direccion')?.errors?.['maxlength']">El Dirección no puede tener mas de 20 caracteres </div>
+	</div>
+    <div class="div-persona div-input">
+		<label for="edad-rf">Edad</label> 
+		<input 
+		id="edad-rf" 
+		type="number" 
+		formControlName="edad" 
+		placeholder="Ingrese su edad" >
+	</div>
+	<!-- mensaje de validadcion -->
+	<div class="alerta">
+		<div *ngIf="form.get('edad')?.touched && form.get('edad')?.errors?.['required']" class="alerta">Campo requerido, ingrese su edad</div>
+	</div>
+	<!-- button enviar -->
+	<button class="button-register"  [disabled]="form.invalid"  type="submit"  >guardar</button>
+</form>	
+</div>

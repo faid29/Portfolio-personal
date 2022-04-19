@@ -3,35 +3,83 @@
 }
 
 .col-skill{
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 50px;
     border-radius: 5px;
+
 }
 
 .vista-skill{
-    display: flex;
-    flex-direction: row;
-    text-align:left;
+    display: block;
+    text-align:center;
+    padding: 0;
+    margin: 0;
     background-color: #191919;
-    border: 1px solid #262626;
-    border-radius: 5px;
+    border: 10px solid #979597;
+    border-radius: 20px;
     padding-right: 10px;
 }
 
-.img-inskill{
-    object-fit: contain;
-    max-width: 100px;
-    margin-top: 50px;
+.p-nombre-skill{
+    font-size: 2rem;
 }
 
+.p-nivel-skill{
+    font-size: 1.5rem;
+}
 
+progress{
+    width: 1fr;
+    height: 40px;
+}
 
 .app-skill{
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .col-skill{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+     }
+}
+
+@media screen and (max-width: 992px) {
+
+    .col-skill{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    
+    }
+
+    .p-nombre-skill{
+        font-size: 1.9rem;
+    }
+    
+    .p-nivel-skill{
+        font-size: 1.4rem;
+    }
+
+    .p-porcentaje{
+        font-size: 0.8rem;
+    }
+
+    progress{
+        width: 1fr;
+        height: 35px;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -41,5 +89,56 @@
         flex-direction: column;
         text-align: center;
     }
+
+
+    .col-skill{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    
+    }
+
+    .p-nombre-skill{
+        font-size: 1.8rem;
+    }
+    
+    .p-nivel-skill{
+        font-size: 1.3rem;
+    }
+
+    progress{
+        width: 1fr;
+        height: 30px;
+    }
+    
     
 }
+
+@media screen and (max-width: 540px) {
+
+    .col-skill{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+    }
+
+
+    .p-nombre-skill{
+        font-size: 1.5rem;
+    }
+    
+    .p-nivel-skill{
+        font-size: 0.8rem;
+    }
+    
+    progress{
+        width: 1fr;
+        height: 28px;
+    }
+    
+}
+
+
+
+

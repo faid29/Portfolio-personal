@@ -24,8 +24,5 @@ export class SkillService {
     return this.http.put<Skill>(this.URL + "editar", skill);
   }
 
-/*   getSkill():Observable<Skill>{
-    return this.http.get<Skill>(this.URL + "1")
-  } */
 
 }

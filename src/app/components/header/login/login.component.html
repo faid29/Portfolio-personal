@@ -1,17 +1,19 @@
-<div class="login-icon">
-			<a href="#openLoginModal" class="link-icon"><i class="bi bi-person-circle user-icon"></i></a>
-</div><!-- login Modal starts here    ================================================== -->
-<div class="modalDialog" id="openLoginModal">
+<!-- login Modal starts here    ================================================== -->
+<div class="modalDialog"  *ngIf="mostrarModal">
 	<div class="login-container">
-		<div class="login-info">
-			<form autocomplete="off" (ngSubmit)="enviar()"  [formGroup]="f" action="">
-				<label><b>Email</b></label> <input name="uname" placeholder="Ingrese su email" required="" type="text">
-				<label><b>Password</b></label> <input autocomplete="on" name="psw" placeholder="Ingrese su password" required="" type="password">
-				<button class="login" type="submit">Entrar</button>
-				<div class="login-bottom-container">
-					<span class="psw">Olvidó <a href="#">password?</a> &nbsp; &#124; &nbsp; Crear <a href="#openLoginModal-register">Cuenta</a></span>
-				</div><a class="login-modal-close" href="#close">Cancel</a>
-			</form>
+		<div class="login-form" *ngIf="mostrarIniciarSesion && !isLogged">
+			<div class="titulo-form"><h3>Iniciar Sesión <a routerLink="/register" href="#" (click)="mostrarOcultar()">{{tituloRegistro}}</a></h3></div>
+			<app-login-form></app-login-form>
+		</div>
+		<div class="login-form" *ngIf="mostrarRegistro && !isLogged">
+			<div class="titulo-form"><h3>Registrar <a routerLink="/login" href="#" (click)="mostrarOcultar()">{{tituloRegistro}}</a></h3></div>
+			<app-register-form></app-register-form>
+		</div>
+		<div *ngIf="!isLogged"><button (click)="toggleModal()">Salir</button></div>
+		<div class="login-salir" *ngIf="isLogged" >
+			<h3>Iniciaste Sesión</h3>
+			<a class="login-salir-a" href="#">Home<i class="bi bi-house-door-fill icon-home"></i></a>
+			<button (click)="onLogOut()" >Cerrar Sesión<i class="bi bi-door-open"></i></button>
 		</div>
 	</div>
 </div>

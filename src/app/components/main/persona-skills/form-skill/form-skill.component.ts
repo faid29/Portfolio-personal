@@ -19,6 +19,7 @@ export class FormSkillComponent implements OnInit {
 			id: [0],
 			nombre_skill: ["",[Validators.required, Validators.minLength(3), Validators.maxLength(60),],],
 			nivel: ["", [Validators.required, Validators.min(1), Validators.max(10)],],
+			color_skill: [""],
     	});
 	}
 
@@ -27,6 +28,7 @@ export class FormSkillComponent implements OnInit {
 			id: skill.id,
 			nombre_skill: skill.nombre_skill,
 			nivel: skill.nivel,
+			color_skill: skill.color_skill
 		});
 		this.mostrarForm = true;
 	}

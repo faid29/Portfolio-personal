@@ -1,0 +1,18 @@
+<input type="checkbox" id="button-modal-proyecto">
+<label for="button-modal-proyecto" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-proyecto" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-proyecto"><button class="button-nueva" (click)="toggleForm()">Nuevo Proyecto</button></div> 
+        <app-form-proyecto
+            #formProyecto
+            (nuevaProyecto)="crearNuevaProyecto($event)">
+        </app-form-proyecto>
+        <app-proyecto  
+            *ngFor="let proyecto of proyectos"
+            [proyecto]="proyecto"
+            (borrarS)="borrarProyecto($event)"
+            (editarS)="editarProyecto($event)">
+        </app-proyecto>
+    </div>
+</div>

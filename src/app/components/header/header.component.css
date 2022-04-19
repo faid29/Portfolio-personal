@@ -28,6 +28,22 @@ ul{
     color: #fff;
 }
 
+.login-icon {	
+    float: right;
+    margin-top: 2px;
+    margin-right: 20px;
+    border: none;
+}
+
+.user-icon{
+    color: #21DBAA;
+    width: 25px;
+    margin: 0px;
+    height: 20px;   
+    text-align: center;
+    font-size: 1rem;
+}
+
 .header-button-login{
     background-color: black;
     color: #21DBAA;
@@ -35,15 +51,6 @@ ul{
     border: none;
     float: right;
     margin-right: 20px;
-}
-
-.user-icon{
-
-    width: 25px;
-    margin: 0px;
-    height: 20px;   
-    text-align: center;
-    font-size: 1rem;
 }
 
 

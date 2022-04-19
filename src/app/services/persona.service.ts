@@ -10,31 +10,30 @@ import { Persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL='http://localhost:8080/api/persona/1'
+  URL='http://localhost:8080/api/persona/'
+  
 
   constructor(private http: HttpClient) { 
   }
   
 
   getPersona():Observable<Persona>{
-    return this.http.get<Persona>(this.URL)
+    return this.http.get<Persona>(this.URL + "1")
   }
 
-/*   postPerfil():Observable<any>{
-    return this.http.post('/api/perfil/nueva');
+  nuevaPersona(persona: Persona): Observable<Persona> {
+    return this.http.post<Persona>(this.URL + "nueva", persona);
   }
 
-  savePerfil():Observable<Perfil>{
-    return this.http.post('/api/perfil/guardar');
+  borrarPersona(id: number): Observable<any> {
+    return this.http.delete(this.URL + "borrar/" + id);
   }
 
-  editarPerfil(id:string, perfil: Perfil):Observable<Perfil[]>{
-    return this.http.put('/api/perfil/'+id, perfil);
+  editarPersona(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona>(this.URL + "editar", persona);
   }
 
-  eliminar(id:string):Observable<any>{
-    return this.http.delete('/api/perfil/'+id)
-  } */
+
 
 
 

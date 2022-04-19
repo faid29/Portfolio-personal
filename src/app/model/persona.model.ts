@@ -17,7 +17,7 @@ export interface Persona {
     ciudad: string;
     estado_civil: string;
     direccion: string;
-    edad: string;
+    edad: number;
     foto: string;
     profesion: Profesion[];
     laboral: Laboral[];

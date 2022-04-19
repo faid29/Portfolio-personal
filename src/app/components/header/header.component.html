@@ -3,8 +3,10 @@
         <div *ngFor="let data of dataLogo" class="header-logo">
             <i class="{{ data.icon1}}">{{data.icon2}}</i><div class="logo-title"><span>{{data.titulo1}}<br>{{data.titulo2}}</span></div><b>{{data.titulo3}} </b>
         </div>
-        <app-login></app-login>
-        <app-registro></app-registro>
+        <div class="login-icon" >
+            <a (click)="toggleModal()"><i class="bi bi-person-circle user-icon"></i></a>
+        </div>
+        <app-login #mostrarModal ></app-login>
     </div>
     <div class="header-bottom">
         <nav class="nav">
@@ -12,7 +14,7 @@
                 <button (click)="showMenu=!showMenu" class="button-menu">
                     <i class="bi bi-list"></i>
                 </button>
-                <a href="" class="nav-home-link">
+                <a routerLink="/home" href="#" class="nav-home-link">
                     <i class="bi bi-house-door-fill icon-home"></i>
                 </a>
             </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-login',
@@ -7,39 +7,50 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  f : FormGroup
 
-  formu={
-    nombre:'',
-    apellido:'',
-    emaill:'',
-    password:'',
-    pais:'',
-    ciudad:'',
-    estado_civil:'',
-    direccion:'',
-    edad:''
+  mostrarModal: boolean = false;
+  isLogged: boolean = false
+
+  constructor(private tokenService: TokenService) {
+
   }
 
-  constructor(private fb: FormBuilder) { 
-    this.f = fb.group({
-      nombre:'',
-      apellido:'',
-      emaill:'',
-      password:'',
-      pais:'',
-      ciudad:'',
-      estado_civil:'',
-      direccion:'',
-      edad:''
+  ngOnInit() {
 
-    })
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  ngOnInit(): void {
+
+  toggleModal() {
+    this.mostrarModal = !this.mostrarModal
   }
 
-  
-  enviar(){}
+  mostrarRegistro: boolean = false;
+  mostrarIniciarSesion: boolean = true;
+  tituloRegistro: string = "Registrarse";
+
+  mostrarOcultar() {
+    if (this.mostrarRegistro) {
+      this.mostrarRegistro = false;
+      this.mostrarIniciarSesion = true;
+      this.tituloRegistro = "Registrarse";
+    } else {
+      this.mostrarRegistro = true
+      this.mostrarIniciarSesion = false;
+      this.tituloRegistro = "Iniciar Sesión";
+    }
+  }
+
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+
+  }
+
+
 
 }

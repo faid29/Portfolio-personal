@@ -1,0 +1,44 @@
+
+.form-persona{
+    margin: 20px 10px 10px 10px;
+}
+
+.div-persona{
+    margin-bottom: 5px;
+}
+
+.div-input input[type="text"], .div-input input[type="password"],
+ .div-input input[type="email"], .div-input input[type="number"],
+ .div-input input[type="tel"], select {
+    text-align: center;
+    width: 96%;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    height: 30px;
+    padding: 6px 0 1px 5px;
+    margin: 8px;
+}
+.div-input input[type="text"]:focus, .div-input input[type="password"]:focus {
+    border: 1px solid #10a7d5;
+    background-color: #fff7e6;
+    outline: 0;
+}
+
+.alerta{
+    margin-left: 20px;
+    font-size: 0.7rem;
+    background-color: #fa8585;
+    width: 95%;
+    border-radius: 5px;
+    color: #262626;
+}
+
+button{
+    color:#fff;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+}

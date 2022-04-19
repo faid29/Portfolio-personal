@@ -1,0 +1,63 @@
+<div class="login-info">
+    <form [formGroup]="form"  (ngSubmit)="onSubmit($event)" autocomplete="off">
+        <div grupo-form>
+            <label for="nombre"><b>Nombre</b></label> 
+            <input 
+            id="nombre" 
+            type="text"
+            maxlength="21"
+            minlength="4"
+            formControlName="nombre" 
+            placeholder="Nombre">
+        </div>
+            <!-- mensaje de validadcion -->
+            <div class="alerta">
+                <div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['required']" class="alerta">Campo requerido, ingrese su nombre</div>
+                <div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['minlength']">El campo Nombre debe tener al menos {{form.get('nombre')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+                <div *ngIf="form.get('nombre')?.touched && form.get('nombre')?.errors?.['maxlength']">El Nombre no puede tener mas de 20 caracteres </div>
+            </div>
+        <div grupo-form>
+            <label for="nombreUsuario"><b>Nombre Usuario</b></label> 
+            <input 
+            id="nombreUsuario" 
+            type="text"
+            maxlength="21"
+            minlength="3"
+            formControlName="nombreUsuario" 
+            placeholder="Nombre Usuario" >
+        </div>
+        <!-- mensaje de validadcion -->
+        <div class="alerta">
+            <div *ngIf="form.get('nombreUsuario')?.touched && form.get('nombreUsuario')?.errors?.['required']" class="alerta">Campo requerido, ingrese su apellido</div>
+            <div *ngIf="form.get('nombreUsuario')?.touched && form.get('nombreUsuario')?.errors?.['minlength']">El campo Nombre de Usuario debe tener al menos {{form.get('nombreUsuario')?.errors?.['minlength']?.requiredLength}} caráctes </div>
+            <div *ngIf="form.get('nombreUsuario')?.touched && form.get('nombreUsuario')?.errors?.['maxlength']">El Nombre de Usuario no puede tener mas de 20 caracteres </div>
+        </div>
+        <div grupo-form>
+            <label for="email-rf"><b>Email</b></label> 
+            <input 
+            id="email-rf" 
+            type="email" 
+            formControlName="email" 
+            placeholder="Email" 
+            >
+        </div>
+        <!-- mensaje de validadcion -->
+        <div class="alerta">
+            <div *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']" class="alerta">Campo requerido, ingrese un email</div>
+        </div>
+        <div grupo-form>
+            <label for="password-rf"><b>Password</b></label> 
+            <input 
+            id="password-rf" 
+            type="password"
+            formControlName="password" 
+            placeholder="password" autocomplete="on">
+        </div>
+        <!-- mensaje de validadcion -->
+        <div class="alerta">
+            <div *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']" class="alerta">Campo requerido, ingrese un password</div>
+        </div>
+        <!-- button enviar -->
+        <button class="button-register"  [disabled]="form.invalid"  type="submit">Registrar</button>
+    </form>		
+</div>

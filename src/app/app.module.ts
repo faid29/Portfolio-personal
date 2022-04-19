@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/header/login/login.component';
-import { RegistroComponent } from './components/header/registro/registro.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PerfilFotoComponent } from './components/main/perfil-foto/perfil-foto.component';
@@ -28,7 +27,16 @@ import { IdiomaComponent } from './components/main/persona-idiomas/idioma/idioma
 import { PersonaSkillsComponent } from './components/main/persona-skills/persona-skills.component';
 import { FormSkillComponent } from './components/main/persona-skills/form-skill/form-skill.component';
 import { SkillComponent } from './components/main/persona-skills/skill/skill.component';
-
+import { PersonaProyectosComponent } from './components/main/persona-proyectos/persona-proyectos.component';
+import { FormProyectoComponent } from './components/main/persona-proyectos/form-proyecto/form-proyecto.component';
+import { ProyectoComponent } from './components/main/persona-proyectos/proyecto/proyecto.component';
+import { FormPersonaComponent } from './components/main/form-persona/form-persona.component';
+import { PersonaComponent } from './components/main/persona/persona.component';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RegisterFormComponent } from './components/header/login/register-form/register-form.component';
+import { LoginFormComponent } from './components/header/login/login-form/login-form.component';
+import { interceptorProvider } from './interceptors/persona-interceptor.service';
 
 
 @NgModule({
@@ -39,7 +47,6 @@ import { SkillComponent } from './components/main/persona-skills/skill/skill.com
     FooterComponent,
     PerfilFotoComponent,
     LoginComponent,
-    RegistroComponent,
     PersonaProfesionesComponent,
     ProfesionComponent,
     FormProfesionComponent,
@@ -54,7 +61,14 @@ import { SkillComponent } from './components/main/persona-skills/skill/skill.com
     IdiomaComponent,
     PersonaSkillsComponent,
     FormSkillComponent,
-    SkillComponent
+    SkillComponent,
+    PersonaProyectosComponent,
+    FormProyectoComponent,
+    ProyectoComponent,
+    FormPersonaComponent,
+    PersonaComponent,
+    RegisterFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +76,11 @@ import { SkillComponent } from './components/main/persona-skills/skill/skill.com
     HttpClientModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(), // ToastrModule added,
+    BrowserAnimationsModule, // required animations module
   ],
-  providers: [],
+  providers: [ interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

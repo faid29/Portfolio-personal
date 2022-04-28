@@ -12,7 +12,7 @@ import { PersonaProfesionesComponent } from './components/main/persona-profesion
 import { PersonaProyectosComponent } from './components/main/persona-proyectos/persona-proyectos.component';
 import { PersonaSkillsComponent } from './components/main/persona-skills/persona-skills.component';
 import { PersonaComponent } from './components/main/persona/persona.component';
-import { PersonaGuardService as guard } from './guards/persona-guard.service';
+import { ProdGuardService as guard } from './guards/prod-guard.service';
 
 
 const routes: Routes = [

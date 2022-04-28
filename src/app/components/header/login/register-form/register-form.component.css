@@ -1,7 +1,9 @@
 
-form input[type="text"], form input[type="password"],
- form input[type="email"], form input[type="number"],
- form input[type="tel"], select {
+div{
+    background-color: #262626;
+    border: none;
+}
+form input[type="text"], input[type="password"] {
     background-color: #fff;
     text-align: center;
     width: 96%;
@@ -11,15 +13,13 @@ form input[type="text"], form input[type="password"],
     padding: 6px 0 2px 5px;
     margin: 8px;
 }
-form input[type="text"]:focus, form input[type="password"]:focus {
+form input[type="text"]:focus, .login-info input[type="password"]:focus {
     border: 1px solid #10a7d5;
     background-color: #fff7e6;
     outline: 0;
 }
-form {padding-bottom: 5%;}
 
-
-button {
+button{
     background-color: #199c79;
     color: white;
     padding: 10px 20px;
@@ -29,20 +29,5 @@ button {
     width: 100%;
     border-radius: 5px;
     clear: both;
-}
-
-/*_____________formulario_---------------------*/
-
-.grupo-form{
-    margin: 3;
-}
-
-.alerta{
-    margin-top: 1px;
-    margin-left: 10px;
-    font-size: 0.8rem;
-    background-color: #fa8585;
-    width: 95%;
-    border-radius: 5px;
-    color: #262626;
+    border: solid 1px;
 }

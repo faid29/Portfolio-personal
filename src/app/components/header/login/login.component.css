@@ -17,38 +17,19 @@
 .modalDialog>div {
     width: 50%;
     position: relative;
-    margin: 2vh auto;
+    margin: 5vh auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #262626
 }
 
-.login-container {
-    width: 25%;
-    border: 5px #999;
-}
-
-.titulo-form{
-    text-align: center;
-}
-
-.login-salir{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.login-salir-a{
-    font-size: 1.5rem;
-    margin: 20px auto;
-}
-
 a{
-   color: #19a880; 
+   color: #fff; 
+   text-decoration: none;
 }
 
 a:hover{
-    color: #21DBA6;
+    color: #000;
 }
 
 button{

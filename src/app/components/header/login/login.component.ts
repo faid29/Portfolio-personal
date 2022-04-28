@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenService } from 'src/app/services/token.service';
+
 
 @Component({
   selector: 'app-login',
@@ -11,17 +11,13 @@ export class LoginComponent implements OnInit {
   mostrarModal: boolean = false;
   isLogged: boolean = false
 
-  constructor(private tokenService: TokenService) {
+  constructor() {
 
   }
 
   ngOnInit() {
 
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    }
+
   }
 
 
@@ -46,7 +42,6 @@ export class LoginComponent implements OnInit {
   }
 
   onLogOut():void{
-    this.tokenService.logOut();
     window.location.reload();
 
   }

@@ -5,9 +5,11 @@ import { JwtDTO } from '../model/jwtDto.model';
 import { LoginUsuario } from '../model/loginUsuario';
 import { NuevoUsuario } from '../model/nuevoUsuario';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
 
   authURL = 'http://localhost:8080/auth/';
@@ -21,4 +23,5 @@ export class AuthService {
   public login(loginUsuario: LoginUsuario): Observable<JwtDTO> {
     return this.httpClient.post<JwtDTO>(this.authURL + 'login', loginUsuario);
   }
+
 }

@@ -18,7 +18,7 @@ export class PersonaService {
   
 
   getPersona():Observable<Persona>{
-    return this.http.get<Persona>(this.URL + "1")
+    return this.http.get<Persona>(`${this.URL}1`)
   }
 
   nuevaPersona(persona: Persona): Observable<Persona> {

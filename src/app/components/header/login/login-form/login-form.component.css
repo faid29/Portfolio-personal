@@ -1,4 +1,8 @@
 
+div{
+    background-color: #262626;
+    border: none;
+}
 form input[type="text"], input[type="password"] {
     background-color: #fff;
     text-align: center;
@@ -15,10 +19,6 @@ form input[type="text"]:focus, .login-info input[type="password"]:focus {
     outline: 0;
 }
 
-form {
-    padding-bottom: 5%;
-}
-
 button{
     background-color: #199c79;
     color: white;
@@ -29,29 +29,6 @@ button{
     width: 100%;
     border-radius: 5px;
     clear: both;
+    border: solid 1px;
 }
 
-.login-bottom-container {
-    text-align: center;
-    padding: 5px;
-    margin-bottom: 5px;
-}
-span{
-    padding-top: 16px;
-}
-
-/*_____________formulario_---------------------*/
-
-.grupo-form{
-    margin: 3;
-}
-
-.alerta{
-    margin-top: 1px;
-    margin-left: 10px;
-    font-size: 0.7rem;
-    background-color: #fa8585;
-    width: 95%;
-    border-radius: 5px;
-    color: #262626;
-}

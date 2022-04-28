@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Router } from '@angular/router';
-import { LoginUsuario } from 'src/app/model/loginUsuario';
 import { AuthService } from 'src/app/services/auth.service';
-import { TokenService } from 'src/app/services/token.service';
 import { ToastrService } from 'ngx-toastr';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { TokenService } from 'src/app/services/token.service';
+import { LoginUsuario } from 'src/app/model/loginUsuario';
 
 @Component({
   selector: 'app-login-form',
@@ -14,8 +12,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginFormComponent implements OnInit {
   
-  form:FormGroup;
-
   isLogged = false;
   isLoginFail = false;
   loginUsuario: LoginUsuario;
@@ -24,15 +20,12 @@ export class LoginFormComponent implements OnInit {
   roles: string[] = [];
   errMsj: string;
 
-  constructor(private formBuilder: FormBuilder ,private tokenService: TokenService,private authService: AuthService,
-    private router: Router, private toastr: ToastrService, ){ 
-
-      this.form= this.formBuilder.group({
-        id:[0],
-        nombreUsuario:['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
-        password:['', [Validators.required]]
-      })
-  }
+  constructor(
+    private tokenService: TokenService,
+    private authService: AuthService,
+    private router: Router,
+    private toastr: ToastrService
+  ) { }
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
@@ -42,10 +35,12 @@ export class LoginFormComponent implements OnInit {
     }
   }
 
-  onSubmit(): void {
+  onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe( (data) => {
+    this.authService.login(this.loginUsuario).subscribe(
+      data => {
         this.isLogged = true;
+
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
@@ -53,8 +48,7 @@ export class LoginFormComponent implements OnInit {
         this.toastr.success('Bienvenido ' + data.nombreUsuario, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
-        this.reloadPage();
+        this.reloadPage()
       },
       err => {
         this.isLogged = false;
@@ -69,6 +63,11 @@ export class LoginFormComponent implements OnInit {
 
   reloadPage(): void {
     window.location.reload();
+  }
+
+  logOut(){
+    window.sessionStorage.clear();
+    this.reloadPage()
   }
 
 }

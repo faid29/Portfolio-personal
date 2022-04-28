@@ -1,19 +1,6 @@
-<!-- login Modal starts here    ================================================== -->
 <div class="modalDialog"  *ngIf="mostrarModal">
 	<div class="login-container">
-		<div class="login-form" *ngIf="mostrarIniciarSesion && !isLogged">
-			<div class="titulo-form"><h3>Iniciar Sesión <a routerLink="/register" href="#" (click)="mostrarOcultar()">{{tituloRegistro}}</a></h3></div>
-			<app-login-form></app-login-form>
-		</div>
-		<div class="login-form" *ngIf="mostrarRegistro && !isLogged">
-			<div class="titulo-form"><h3>Registrar <a routerLink="/login" href="#" (click)="mostrarOcultar()">{{tituloRegistro}}</a></h3></div>
-			<app-register-form></app-register-form>
-		</div>
-		<div *ngIf="!isLogged"><button (click)="toggleModal()">Salir</button></div>
-		<div class="login-salir" *ngIf="isLogged" >
-			<h3>Iniciaste Sesión</h3>
-			<a class="login-salir-a" href="#">Home<i class="bi bi-house-door-fill icon-home"></i></a>
-			<button (click)="onLogOut()" >Cerrar Sesión<i class="bi bi-door-open"></i></button>
-		</div>
+		<router-outlet></router-outlet>
+		<a href="/home"><button type="button">Salir</button></a>
 	</div>
 </div>

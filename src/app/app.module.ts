@@ -36,7 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegisterFormComponent } from './components/header/login/register-form/register-form.component';
 import { LoginFormComponent } from './components/header/login/login-form/login-form.component';
-import { interceptorProvider } from './interceptors/persona-interceptor.service';
+import { MenuComponent } from './components/header/menu/menu.component';
+
 
 
 @NgModule({
@@ -68,7 +69,9 @@ import { interceptorProvider } from './interceptors/persona-interceptor.service'
     FormPersonaComponent,
     PersonaComponent,
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    MenuComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,7 @@ import { interceptorProvider } from './interceptors/persona-interceptor.service'
     ToastrModule.forRoot(), // ToastrModule added,
     BrowserAnimationsModule, // required animations module
   ],
-  providers: [ interceptorProvider],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

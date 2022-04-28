@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { TokenService } from '../services/token.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaGuardService implements CanActivate {
+export class ProdGuardService implements CanActivate {
 
   realRol: string;
 

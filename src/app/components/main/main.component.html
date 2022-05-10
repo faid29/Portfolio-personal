@@ -133,8 +133,23 @@
                 </app-persona-skills>
             </div>
         </div>
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::SOFT SKILL ::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-soft" id="page-6">
+            <div class="titulos-h5"><h5>Soft Skill</h5></div>
+            <div class="col-soft">
+                <div class="vista-soft" *ngFor="let soft of persona.soft">
+                    <p class="p-nombre-soft">{{soft.nombre}}</p>
+                </div>
+            </div>
+            <div class="app-soft" *ngIf="isAdmin"> 
+                <app-persona-softs
+                [softs]="persona.soft"
+                >
+                </app-persona-softs>
+            </div>
+        </div>
 <!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::PROYECTOS ::::::::::::::::::::::::::::::::::::::: -->
-        <div class="container-proyecto" id="page-6">
+        <div class="container-proyecto" id="page-7">
             <div class="titulos-h5"><h5>Proyectos</h5></div>
             <div class="col-proyecto">
                 <div class="vista-proyecto" *ngFor="let proyecto of persona.proyecto" >

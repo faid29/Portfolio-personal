@@ -12,4 +12,11 @@
 		</div>
 		<a href="/home"><button type="button">Salir</button></a>
 	</div>
+	<div class="container" *ngIf="closeSesion == isLogged ">
+		<div class="col">
+			<h5>Bienvenido, ya iniciaste sesión</h5>
+			<a href="/home">Ir al Home<i class="bi bi-house-door-fill home-icon"></i></a>
+			<button (click)="onLogOut()">Cerrar Sesión</button>
+		</div>
+	</div>
 </div>

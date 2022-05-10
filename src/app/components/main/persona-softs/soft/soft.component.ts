@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Soft } from 'src/app/model/soft.model';
+
 
 @Component({
   selector: 'app-soft',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoftComponent implements OnInit {
 
-  constructor() { }
+  @Input() soft!: Soft;
+  @Output() borrarS: EventEmitter<number> = new EventEmitter();
+  @Output() editarS: EventEmitter<Soft> = new EventEmitter();
+  
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  borrarSoft(): void {
+    this.borrarS.emit(this.soft.id);
   }
 
+  editarSoft(): void {
+    this.editarS.emit(this.soft);
+  }
 }

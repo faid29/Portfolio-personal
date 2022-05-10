@@ -13,8 +13,6 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class RegisterFormComponent implements OnInit {
 
-  isLogged: boolean = true;
-
   nuevoUsuario: NuevoUsuario;
   nombre: string;
   nombreUsuario: string;
@@ -31,7 +29,6 @@ export class RegisterFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.isLogged = this.tokenService. isLogged();
   }
 
   onRegister(): void {
@@ -42,7 +39,8 @@ export class RegisterFormComponent implements OnInit {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
 
-        this.router.navigate(['/login']);
+        this.reloadPage();
+
       },
       error:err => {
         this.errMsj = err.error.mensaje;
@@ -51,6 +49,10 @@ export class RegisterFormComponent implements OnInit {
         });
       }
     });
+  }
+
+  reloadPage(): void {
+    window.location.reload();
   }
 
 }

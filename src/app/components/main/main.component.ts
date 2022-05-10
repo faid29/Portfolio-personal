@@ -10,7 +10,8 @@ import { FormPersonaComponent } from './form-persona/form-persona.component';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css', './main.profesiones.component.css',
              './main.laborales.component.css', './main.educaciones.component.css', 
-             './main.idiomas.component.css','./main.skills.component.css','./main.proyectos.component.css', './main.personas.component.css']
+             './main.idiomas.component.css','./main.skills.component.css','./main.proyectos.component.css', 
+             './main.personas.component.css', './main.softs.component.css']
 })
 
 
@@ -22,6 +23,7 @@ export class MainComponent implements OnInit {
      "educacion":[{id:0, nombre_institucion:'', nombre_certificacion:'', fecha_inicio:'',fecha_fin:'', estado:'', descripcion_curso:'', imagen_institucion:''}],
      "idioma":[{id:0, nombre_idioma:'', nivel_idioma:''}],
      "skill":[{id:0, nombre_skill:'', nivel:0, color_skill:''}],
+     "soft":[{id:0, nombre:''}],
      "proyecto":[{id:0, titulo_proyecto:'', fecha_proyecto:'', imagen_proyecto:'',imagen_proyecto1:'',imagen_proyecto2:'',imagen_proyecto3:'', descripcion_proyecto:''}]
     };
 

@@ -1,0 +1,138 @@
+.container-soft{
+    margin: 0px 20px 0px 20px ;
+}
+
+.col-soft{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    border-radius: 5px;
+
+}
+
+.vista-soft{
+    display: block;
+    text-align:center;
+    padding: 0;
+    margin: 0;
+    background-color: #191919;
+    border: 10px solid #979597;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+.p-nombre-soft{
+    font-size: 2rem;
+}
+
+.p-nivel-soft{
+    font-size: 1.5rem;
+}
+
+progress{
+    width: 1fr;
+    height: 40px;
+}
+
+.app-soft{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .col-soft{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+     }
+}
+
+@media screen and (max-width: 992px) {
+
+    .col-soft{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    
+    }
+
+    .p-nombre-soft{
+        font-size: 1.9rem;
+    }
+    
+    .p-nivel-soft{
+        font-size: 1.4rem;
+    }
+
+    .p-porcenoft{
+        font-size: 0.8rem;
+    }
+
+    progress{
+        width: 1fr;
+        height: 35px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .vista-soft{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .col-soft{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    
+    }
+
+    .p-nombre-soft{
+        font-size: 1.8rem;
+    }
+    
+    .p-nivel-soft{
+        font-size: 1.3rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 540px) {
+
+    .col-soft{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 0.5rem;
+
+        border-radius: 5px;
+    
+    }
+    
+    .vista-soft{
+        display: block;
+        text-align:center;
+        background-color: #191919;
+        border: 5px solid #979597;
+        border-radius: 20px;
+        padding-right: 10px;
+    }
+    
+    .p-nombre-soft{
+        font-size: 1.3rem;
+    }
+    
+    .p-nivel-soft{
+        font-size: 1rem;
+    }
+
+}

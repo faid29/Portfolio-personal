@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TokenService } from 'src/app/services/token.service';
 import { LoginComponent } from './login/login.component';
 
 
@@ -12,26 +11,17 @@ import { LoginComponent } from './login/login.component';
 export class HeaderComponent implements OnInit {
 
   @ViewChild("mostrarModal") mostrarModal!: LoginComponent;
-
-  isLogged: boolean = true;
-  closeSesion: boolean =  false;
-
-  constructor(private tokenService : TokenService ){
+  constructor( ){
   
    }
 
-  ngOnInit(): void {
-    this.isLogged = this.tokenService. isLogged()
-  }
+  ngOnInit(): void {}
   
   toggleModal(){
     this.mostrarModal.toggleModal();
   }
 
-  onLogOut():void{
-    this.tokenService.logOut();
-    window.location.reload();
-  }
+  
 
   logos=[
     {

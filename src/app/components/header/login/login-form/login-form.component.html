@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="onLogin()" novalidate *ngIf="isLogged">
+<form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
     <div class="form-group">
         <label for="nombreUsuario">Nombre de Usuario</label>
         <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" [(ngModel)]="nombreUsuario"

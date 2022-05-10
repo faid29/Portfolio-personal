@@ -1,1 +1,18 @@
-<p>persona-softs works!</p>
+<input type="checkbox" id="button-modal-soft">
+<label for="button-modal-soft" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
+<div class="modal">
+    <div class="contenedor">
+        <div><button class="button-close"><label for="button-modal-soft" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div class="nueva-soft"><button class="button-nueva" (click)="toggleForm()">Nuevo Soft </button></div> 
+        <app-soft  
+        *ngFor="let soft of softs"
+        [soft]="soft"
+        (borrarS)="borrarSoft($event)"
+        (editarS)="editarSoft($event)">
+        </app-soft>
+        <app-form-soft
+            #formSoft
+            (nuevaSoft)="crearNuevaSoft($event)">
+        </app-form-soft>
+    </div>
+</div>

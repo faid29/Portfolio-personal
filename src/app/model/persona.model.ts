@@ -4,6 +4,7 @@ import { Laboral } from "./laboral.model";
 import { Profesion } from "./profesion.model";
 import { Proyecto } from "./proyecto.model";
 import { Skill } from "./skill.model";
+import { Soft } from "./soft.model";
 
 export interface Persona {
 
@@ -24,5 +25,6 @@ export interface Persona {
     educacion: Educacion[];
     idioma: Idioma[];
     skill: Skill[];
+    soft: Soft[];
     proyecto: Proyecto[];
 }

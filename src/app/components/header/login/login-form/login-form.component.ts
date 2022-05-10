@@ -11,8 +11,7 @@ import { LoginUsuario } from 'src/app/model/loginUsuario';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-   
-  isLogged: boolean = true;
+  
 
   loginUsuario: LoginUsuario;
   nombreUsuario: string;
@@ -27,7 +26,6 @@ export class LoginFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.isLogged = this.tokenService. isLogged()
   }
 
   onLogin(): void {

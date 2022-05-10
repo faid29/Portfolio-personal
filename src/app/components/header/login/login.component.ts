@@ -12,13 +12,13 @@ export class LoginComponent implements OnInit {
   mostrarModal: boolean = false;
   isLogged: boolean = true;
   isAdmin: boolean = false; 
-
+  closeSesion: boolean =  false;
   constructor(private tokenService : TokenService) {
 
   }
 
   ngOnInit() {
-    this.isLogged = this.tokenService. isLogged();
+    this.isLogged = this.tokenService. isLogged()
     this.isAdmin = this.tokenService.isAdmin();
   }
 

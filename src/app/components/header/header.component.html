@@ -4,11 +4,8 @@
             <div class="header-logo">
                 <img class="img-logo" src="https://sn3302files.storage.live.com/y4mQvqmrDLxy3WF3K-rrI_j5zFozVhX-G0ED-mq-n_rQfoCECPwAFedeh39dg7aM7DCIDw1xneWKttG0LIcXudU1N_yh5IqUmK6d4N2rbu8L0poU0jMLZBdlMXlUKKXz82YggWK78bs_9BfPIJGwweR9Sf3ZDJQ69mO1ljUmt4N6d0?width=86&height=27&cropmode=none"/>
             </div>
-            <div class="login-icon" *ngIf="isLogged" >
+            <div class="login-icon" >
                 <a (click)="toggleModal()" routerLink="/login"><i class="bi bi-person-circle user-icon"></i></a>
-            </div>
-            <div class="closeSesion" *ngIf="closeSesion == isLogged ">
-                 <button (click)="onLogOut()">Cerrar Sesión</button>
             </div>
             <app-login #mostrarModal ></app-login>
         </div>

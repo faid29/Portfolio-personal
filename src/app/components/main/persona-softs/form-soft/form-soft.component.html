@@ -1,1 +1,18 @@
-<p>form-soft works!</p>
+<div class="form-soft">
+    <form #formSoft [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+        <div class="div-col">  
+            <div class="div-row div-input">
+                <label for="nombre">Habilidad soft</label>
+                <input 
+                type="text"  
+                id="nombre"
+                class="form-control"
+                formControlName="nombre"
+                >
+            </div>
+        </div>  
+        <button type="submit" [disabled]="form.invalid" >
+            guardar
+        </button>
+    </form>
+</div>

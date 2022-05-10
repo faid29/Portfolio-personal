@@ -1,0 +1,84 @@
+
+.contacto-mensaje{
+    background-color: #191919;
+    border: 1px solid #262626;
+    border-radius: 5px;
+
+}
+
+.contacto-title{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin-right: 5px;
+    padding: 10px 10px;
+}
+
+
+.contacto-button{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+}
+
+b{
+    color: #179b76;
+}
+
+
+
+button{
+    
+    color:#fff;
+    margin-right: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 992px){
+
+    .contacto-mensaje{
+        background-color: #191919;
+        border: 1px solid #262626;
+        border-radius: 5px;
+        margin: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto-title{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin-right: 5px;
+        padding: 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    .contacto-title{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin-right: 5px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 468px){
+
+    .contacto-title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-right: 5px;
+        padding: 10px 10px;
+    }
+}

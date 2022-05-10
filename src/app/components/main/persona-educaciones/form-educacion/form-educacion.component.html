@@ -1,73 +1,75 @@
 <div class="form-educacion">
     <form #formEducacion [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
-        <div class="div-educacion">
-            <label for="nombre_institucion">Nombre Institución</label>
-            <input 
-            type="text"  
-            id="nombre_institucion"
-            class="form-control"
-            formControlName="nombre_institucion"
-            type="text"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="nombre_certificacion">Nombre Certificación</label>
-            <input 
-            type="text"  
-            id="nombre_certificacion"
-            class="form-control"
-            formControlName="nombre_certificacion"
-            type="text"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="fecha_inicio">Fecha Inicio</label>
-            <input 
-            type="text"  
-            id="fecha_inicio"
-            class="form-control"
-            formControlName="fecha_inicio"
-            type="date"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="fecha_fin">Fecha Fin</label>
-            <input 
-            type="text"  
-            id="fecha_fin"
-            class="form-control"
-            formControlName="fecha_fin"
-            type="date"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="estado">Fecha Fin</label>
-            <input 
-            type="text"  
-            id="estado"
-            class="form-control"
-            formControlName="estado"
-            type="date"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="descripcion_curso">Descripción educacion</label>
-            <input 
-            id="descripcion_curso"
-            class="form-control"
-            formControlName="descripcion_curso"
-            type="text"
-            >
-        </div>
-        <div class="div-educacion">
-            <label for="imagen_institucion">Imagen Institución</label>
-            <input 
-            type="url"  
-            id="imagen_institucion"
-            class="form-control"
-            formControlName="imagen_institucion"
-            >
-        </div>
+        <div class="div-col">
+            <div class="div-row div-input">
+                <label for="nombre_institucion">Nombre Institución</label>
+                <input 
+                type="text"  
+                id="nombre_institucion"
+                class="form-control"
+                formControlName="nombre_institucion"
+                type="text"
+                placeholder="Nombre Institución">
+            </div>
+            <div class="div-row div-input">
+                <label for="nombre_certificacion">Nombre Certificación</label>
+                <input 
+                type="text"  
+                id="nombre_certificacion"
+                class="form-control"
+                formControlName="nombre_certificacion"
+                type="text"
+                placeholder="Nombre Certificación">
+            </div>
+            <div class="div-row div-input">
+                <label for="fecha_inicio">Fecha Inicio</label>
+                <input 
+                id="fecha_inicio"
+                class="form-control"
+                formControlName="fecha_inicio"
+                type="date"
+                >
+            </div>
+            <div class="div-row div-input">
+                <label for="fecha_fin">Fecha Fin</label>
+                <input  
+                id="fecha_fin"
+                class="form-control"
+                formControlName="fecha_fin"
+                type="date"
+                >
+            </div>
+            <div class="div-row div-input">
+                <label for="estado">Estado</label>
+                <select  
+                id="estado"
+                class="form-control"
+                formControlName="estado">
+                    <option>Finalizado</option>
+                    <option>Abandonado</option>
+                    <option>En curso</option>
+                </select>
+            </div>
+            <div class="div-row div-input">
+                <label for="descripcion_curso">Descripción educacion</label>
+                <input 
+                id="descripcion_curso"
+                class="form-control"
+                formControlName="descripcion_curso"
+                type="text"
+                >
+            </div>
+            <div class="div-row div-input">
+                <label for="imagen_institucion">Imagen Institución</label>
+                <input 
+                type="url"  
+                id="imagen_institucion"
+                class="form-control"
+                formControlName="imagen_institucion"
+                placeholder="Ingresa una url de foto"
+                >
+            </div>
+        </div> 
         <button type="submit" [disabled]="form.invalid" >
             guardar
         </button>

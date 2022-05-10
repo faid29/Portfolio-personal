@@ -11,13 +11,12 @@ import { LoginUsuario } from 'src/app/model/loginUsuario';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  
-  isLogged = false;
-  isLoginFail = false;
+   
+  isLogged: boolean = true;
+
   loginUsuario: LoginUsuario;
   nombreUsuario: string;
   password: string;
-  roles: string[] = [];
   errMsj: string;
 
   constructor(
@@ -28,37 +27,27 @@ export class LoginFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-      this.isLoginFail = false;
-      this.roles = this.tokenService.getAuthorities();
-    }
+    this.isLogged = this.tokenService. isLogged()
   }
 
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe(
-      data => {
-        this.isLogged = true;
-
+    this.authService.login(this.loginUsuario).subscribe({
+      next: data => {
+  
         this.tokenService.setToken(data.token);
-        this.tokenService.setUserName(data.nombreUsuario);
-        this.tokenService.setAuthorities(data.authorities);
-        this.roles = data.authorities;
-        this.toastr.success('Bienvenido ' + data.nombreUsuario, 'OK', {
+        this.toastr.success('Bienvenido ' + this.nombreUsuario, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
         this.reloadPage()
       },
-      err => {
-        this.isLogged = false;
+      error: err => {
         this.errMsj = err.error.message;
         this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        // console.log(err.error.message);
       }
-    );
+    });
   }
 
   reloadPage(): void {

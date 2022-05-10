@@ -1,0 +1,21 @@
+<div class="nav">
+    <div class="nav-home">
+        <a class="nav-home-link" routerLink="/home" href="#" >
+            <i class="bi bi-house-door-fill home-icon"></i>
+        </a>
+    </div>
+    <div class="nav-menu">
+        <ul class="nav-ul">
+            <li class="nav-li">
+                <a (click)="showSubMenu=!showSubMenu" class="nav-li-a">PORTAFOLIO <i class="bi bi-arrow-down-short"></i></a>
+                <a routerLink="contacto" class="nav-li-a">QUIEN SOY <i class="bi bi-question-circle"></i></a>
+                <a routerLink="contacto" class="nav-li-a">CONTACTO <i class="bi bi-telephone-outbound"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<ul class="nav-drop-ul" *ngIf="showSubMenu" >
+    <li class="nav-drop-li" *ngFor="let subMenu of subMenus">
+        <a href="{{subMenu.url}} " class="nav-drop-a">{{subMenu.subtitulo}}</a>
+    </li>
+</ul>

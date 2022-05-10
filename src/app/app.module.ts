@@ -11,7 +11,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/header/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PerfilFotoComponent } from './components/main/perfil-foto/perfil-foto.component';
 import { PersonaProfesionesComponent } from './components/main/persona-profesiones/persona-profesiones.component';
 import { ProfesionComponent } from './components/main/persona-profesiones/profesion/profesion.component';
 import { FormProfesionComponent } from './components/main/persona-profesiones/form-profesion/form-profesion.component';
@@ -36,7 +35,17 @@ import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RegisterFormComponent } from './components/header/login/register-form/register-form.component';
 import { LoginFormComponent } from './components/header/login/login-form/login-form.component';
-import { MenuComponent } from './components/header/menu/menu.component';
+import { BotonCompartirComponent } from './components/main/boton-compartir/boton-compartir.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { NavComponent } from './components/nav/nav.component';
+import { MenuResponsiveComponent } from './components/nav/menu-responsive/menu-responsive.component';
+import { MenuComponent } from './components/nav/menu/menu.component';
+import { FormContactoComponent } from './components/contacto/form-contacto/form-contacto.component';
+import { ContactoMensajeComponent } from './components/contacto/contacto-mensaje/contacto-mensaje.component';
+import { PersonaSoftsComponent } from './components/main/persona-softs/persona-softs.component';
+import { FormSoftComponent } from './components/main/persona-softs/form-soft/form-soft.component';
+import { SoftComponent } from './components/main/persona-softs/soft/soft.component';
+
 
 
 
@@ -46,7 +55,6 @@ import { MenuComponent } from './components/header/menu/menu.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    PerfilFotoComponent,
     LoginComponent,
     PersonaProfesionesComponent,
     ProfesionComponent,
@@ -70,7 +78,16 @@ import { MenuComponent } from './components/header/menu/menu.component';
     PersonaComponent,
     RegisterFormComponent,
     LoginFormComponent,
+    BotonCompartirComponent,
+    ContactoComponent,
+    NavComponent,
     MenuComponent,
+    MenuResponsiveComponent,
+    FormContactoComponent,
+    ContactoMensajeComponent,
+    PersonaSoftsComponent,
+    FormSoftComponent,
+    SoftComponent,
 
   ],
   imports: [

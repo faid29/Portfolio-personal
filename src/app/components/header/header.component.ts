@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 import { LoginComponent } from './login/login.component';
 
 
@@ -11,19 +12,28 @@ import { LoginComponent } from './login/login.component';
 export class HeaderComponent implements OnInit {
 
   @ViewChild("mostrarModal") mostrarModal!: LoginComponent;
-  constructor( ){
+
+  isLogged: boolean = true;
+  closeSesion: boolean =  false;
+
+  constructor(private tokenService : TokenService ){
   
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLogged = this.tokenService. isLogged()
+  }
   
   toggleModal(){
     this.mostrarModal.toggleModal();
   }
 
-  
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
 
-  dataLogo=[
+  logos=[
     {
     'titulo1':'Argentina',
     'titulo2':'Programa',
@@ -33,25 +43,8 @@ export class HeaderComponent implements OnInit {
     }
  ]
 
-  showMenu:boolean = false;
 
-  dataMenu=[
-    {
-    'titulo':'PORTAFOLIO',
-    'url':'',
-    'icon':'bi bi-briefcase'
-    }, 
-    {
-    'titulo':'QUIEN SOY',
-    'url':'',
-    'icon':'bi bi-question-circle'
-    },
-    {
-    'titulo':'CONTACTO',
-    'url':'',
-    'icon':'bi bi-telephone-outbound'
-    }
- ]
+
 
 
 

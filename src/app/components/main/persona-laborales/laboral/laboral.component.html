@@ -1,10 +1,9 @@
 <div class="laboral">
     <div class="laboral-title">
-        <h4>{{laboral.nombre_empresa}}</h4>
-        <p>{{laboral.puesto}}</p>
-        <p>{{laboral.fecha_desde}}</p>
-        <p>{{laboral.fecha_hasta}}</p>
-        <p>{{laboral.descripcion_laboral}}</p>
+        <div class="div-title"><p><b>Empresa: </b>{{laboral.nombre_empresa}}</p></div>
+        <div class="div-title"><p><b>Puesto: </b>{{laboral.puesto}}</p></div>
+        <div class="div-title"><p><b>Fecha: </b>{{laboral.fecha_desde}} <b>hasta</b> {{laboral.fecha_hasta}}</p></div>
+        <div class="div-title"><p><b>Descripción: </b>{{laboral.descripcion_laboral}}</p></div>
     </div>
     <div >
         <button (click)="borrarLaboral()">Eliminar</button><button (click)="editarLaboral()">Editar</button>

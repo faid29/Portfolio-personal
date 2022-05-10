@@ -24,9 +24,18 @@
     margin:auto;
 }
 
+.img-perfil{
+    width:100px;
+    height: 100px;
+    background-size: cover;
+}
+
+
 b{
     color: #179b76;
 }
+
+
 
 button{
     

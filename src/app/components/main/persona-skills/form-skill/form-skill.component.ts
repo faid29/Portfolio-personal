@@ -18,7 +18,7 @@ export class FormSkillComponent implements OnInit {
 		this.form = this.formBuilder.group({
 			id: [0],
 			nombre_skill: ["",[Validators.required, Validators.minLength(3), Validators.maxLength(60),],],
-			nivel: ["", [Validators.required, Validators.min(1), Validators.max(10)],],
+			nivel: ["", [Validators.required, Validators.min(0), Validators.max(10)],],
 			color_skill: [""],
     	});
 	}

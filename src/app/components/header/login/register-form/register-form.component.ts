@@ -13,13 +13,15 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class RegisterFormComponent implements OnInit {
 
+  isLogged: boolean = true;
+
   nuevoUsuario: NuevoUsuario;
   nombre: string;
   nombreUsuario: string;
   email: string;
   password: string;
   errMsj: string;
-  isLogged = false;
+
 
   constructor(
     private tokenService: TokenService,
@@ -29,29 +31,26 @@ export class RegisterFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    }
+    this.isLogged = this.tokenService. isLogged();
   }
 
   onRegister(): void {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
-    this.authService.nuevo(this.nuevoUsuario).subscribe(
-      data => {
+    this.authService.nuevo(this.nuevoUsuario).subscribe({
+      next: data => {
         this.toastr.success('Cuenta Creada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
 
         this.router.navigate(['/login']);
       },
-      err => {
+      error:err => {
         this.errMsj = err.error.mensaje;
         this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        // console.log(err.error.message);
       }
-    );
+    });
   }
 
 }

@@ -1,0 +1,25 @@
+<div class="contacto">
+    <div class="contacto-col">
+        <div class="contacto-row">
+            <h2>Contáctame</h2>
+            <p>Para comunicarte conmigo dejáme un mensaje privado,<br>
+            con el objetivo de profundizar aspectos de mi perfil que resulten de su interés</p>
+        </div>
+      <!--   <div class="nueva-contacto"><button class="button-nueva" (click)="toggleForm()">Enviar mensaje</button></div>  -->
+        <app-form-contacto
+        #formContacto
+        (nuevaContacto)="crearNuevaContacto($event)"
+        ></app-form-contacto>
+    </div>
+    <div class="contacto-col-mensaje" *ngIf="!isLogged">
+        <div class="contacto-row">
+            <app-contacto-mensaje 
+            [contacto]="contacto"
+            (borrarS)="borrarContacto($event)"
+            (editarS)="editarContacto($event)">
+            </app-contacto-mensaje>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+

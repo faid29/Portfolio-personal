@@ -1,13 +1,15 @@
 main{
     color: #fff;
-
+    background-color: #21DBAA;
+    margin: 0;
+    padding: 0;
 }
 
 .grid{
-    height: 87vh;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh;
+    grid-template-rows: auto;
+    height: 86vh;
 
     /*_________background gradiente________________*/
 
@@ -32,10 +34,29 @@ main{
 
 /*_________termina el background gradiente________________*/
 
+.grid-second{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    margin: 0;
+    padding-bottom: 100px;
+
+    background: hsla(270, 94%, 25%, 1);
+
+    background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#42047E", endColorstr="#07F49E", GradientType=1 );
+}
+
 .col{
     padding: 1em;
     gap: 2px;
-    height: 87vh;
+    height: 85vh;
 }
 
 .div-title{
@@ -79,6 +100,16 @@ button{
     border-radius: 5px;
 }
 
+.titulos-h5{
+    text-align: center;
+    background-color: #090909;
+}
+
+h5{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /*_________________________________Button shared/like/coment_____________________________*/
 
 
@@ -89,33 +120,6 @@ button{
     border-radius: 5px;
 }
 
-.share-col{
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: auto;
-}
-
-.ul-share{
-    margin-bottom: 0;
-}
-
-.li-share{
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 15px;
-    text-align: center;
-}
-
-.share-link{
-    font-size: 12px;
-    padding-bottom: 10px;
-}
-
-.img-share{
-    width: 40px;
-}
 
 
 /*::::::::::::::::::::::::::::::::::::::::MEDIA QUERY::::::::::::::::::::::::::::::::::::::::*/
@@ -150,10 +154,7 @@ button{
         width: auto;
         border-radius: 5px;
     }
-    
-    .img-share{
-        width: 25px;
-    }
+
 }
 
 @media screen and (max-width: 992px){
@@ -168,29 +169,15 @@ button{
         margin-left: 11vw;
         width: 220px;
     }
-    
-    .share-col{
-        display: grid;
-        grid-template-columns: 100px 100px;
-        grid-template-rows: auto;
-    }
 
-    .img-share{
-        width: 22px;
-    }
 }
 
 @media screen and (max-width: 768px){
     
-    main{
-        color: #fff;
-    }
-    
     .grid{
-        height: 87vh;
         display: grid;
         grid-template-columns: 60% 40%;
-        grid-template-rows: 100vh;
+        grid-template-rows: 80vh;
     
     }
     
@@ -238,36 +225,10 @@ button{
         margin-left: 0vw;
         width: 100px;
     }
-
-    .share-col{
-        display: grid;
-        grid-template-columns: 50px 50px;
-        grid-template-rows: auto;
-    }
-    
-    .ul-share{
-        margin-bottom: 0;
-        padding-left: 4px;
-    }
-    
-    .li-share{
-        margin-right: 8px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 0.4rem;
-    }
-
-    .img-share{
-        width: 15px;
-    } 
     
 }
 
 
-.titulos-h5{
-    background-color: #515152;
-    text-align: center;
-    border-radius: 5px 5px 0px 0px ;
-}
+
 
 

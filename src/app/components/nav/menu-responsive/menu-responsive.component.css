@@ -1,0 +1,79 @@
+/*________________________________MEDIA QUERY _______________________________________________*/
+@media screen and (max-width: 6000px){
+    .nav-responsive{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-responsive{
+        height: 8vh;
+        display:block;
+        background-color: #191919;
+    }
+
+    .button-icon-list{
+        padding-left: 0;
+        display: block;
+        margin-left: 20px;
+        margin-top: -1px;
+        border: none;
+        background-color: #191919;
+        padding: 0;
+    }
+
+    .icon-list{
+        font-size: 2rem;
+        color: #21DBAA;
+    }
+
+    .icon-home{
+        padding-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+    .nav-home-link{
+        display: none;  
+    }
+    
+
+    
+    .drop-menu{
+        display: inline-block;
+        background-color: #292929;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: auto;
+
+    }
+
+
+
+    .drop-li{
+        margin-top: 5px ;
+        margin-bottom: 10px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .drop-a{
+        font-family:'Roboto','Medium 500';
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: #fff;
+        padding-bottom: 15px;
+    }
+    
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-li-link{
+        font-size: 0.8rem;
+
+    }
+    
+}

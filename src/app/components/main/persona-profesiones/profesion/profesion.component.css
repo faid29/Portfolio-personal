@@ -10,7 +10,15 @@
 }
 
 .profesion-title{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-right: 5px;
     padding: 10px 10px;
+}
+
+b{
+    color: #179b76;
 }
 
 
@@ -41,5 +49,11 @@ button{
         text-align: left;
         display: flex;
         flex-direction: column;
+    }
+
+    .profesion-title{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }

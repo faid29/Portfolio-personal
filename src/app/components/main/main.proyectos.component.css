@@ -1,18 +1,14 @@
 .container-proyecto{
-    background-color: #191919;
+   margin: 20px 20px 0px 20px ;
 }
-
 .col-proyecto{
-
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 50px;
     border-radius: 5px;
 }
 
 .vista-proyecto{
     display: block;
     text-align:left;
+    margin-bottom: 5px;
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;

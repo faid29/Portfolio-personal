@@ -1,34 +1,37 @@
 <div class="form-skill">
     <form #formSkill [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
-        <div class="div-skill">
-            <label for="nombre_skill">Hablidad</label>
-            <input 
-            type="text"  
-            id="nombre_skill"
-            class="form-control"
-            formControlName="nombre_skill"
-            >
-        </div>
-        <div class="div-skill">
-            <label for="nivel">nivel</label>
-            <input 
-            type="range"  
-            min="0"
-            max="10"
-            id="nivel"
-            class="form-control"
-            formControlName="nivel"
-            >
-        </div>
-        <div class="div-skill">
-            <label for="color_skill">Color</label>
-            <input 
-            type="color"
-            id="color_skill"
-            class="form-control"
-            formControlName="color_skill"
-            >
-        </div>
+        <div class="div-col">  
+            <div class="div-row div-input">
+                <label for="nombre_skill">Hablidad</label>
+                <input 
+                type="text"  
+                id="nombre_skill"
+                class="form-control"
+                formControlName="nombre_skill"
+                >
+            </div>
+            <div class="div-row div-input">
+                <label for="nivel">nivel</label>
+                <input 
+                #range
+                type="range"  
+                min="0"
+                max="10"
+                id="nivel"
+                class="form-control"
+                formControlName="nivel"
+                >
+            </div>
+            <div class="div-row div-input">
+                <label for="color_skill">Color</label>
+                <input 
+                type="color"
+                id="color_skill"
+                class="form-control"
+                formControlName="color_skill"
+                >
+            </div>
+        </div>  
         <button type="submit" [disabled]="form.invalid" >
             guardar
         </button>

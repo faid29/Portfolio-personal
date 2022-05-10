@@ -1,6 +1,6 @@
-<div class="form-proyecto">
-    <form #formProyecto [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
-        <div class="div-proyecto">
+<form #formProyecto [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+    <div class="div-col">
+        <div class="div-row">
             <label for="titulo_proyecto">Proyecto</label>
             <input 
             type="text"  
@@ -9,7 +9,7 @@
             formControlName="titulo_proyecto"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="fecha_proyecto">Fecha</label>
             <input 
             type="date"  
@@ -18,7 +18,7 @@
             formControlName="fecha_proyecto"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="descripcion_proyecto">Descripcion</label>
             <input 
             type="text"  
@@ -27,7 +27,7 @@
             formControlName="descripcion_proyecto"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="imagen_proyecto">Imagen proyecto</label>
             <input 
             type="text"  
@@ -36,7 +36,7 @@
             formControlName="imagen_proyecto"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="imagen_proyecto1">Imagen proyecto</label>
             <input 
             type="text"  
@@ -45,7 +45,7 @@
             formControlName="imagen_proyecto1"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="imagen_proyecto2">Imagen proyecto</label>
             <input 
             type="text"  
@@ -54,7 +54,7 @@
             formControlName="imagen_proyecto2"
             >
         </div>
-        <div class="div-proyecto">
+        <div class="div-row">
             <label for="imagen_proyecto3">Imagen proyecto</label>
             <input 
             type="text"  
@@ -63,8 +63,8 @@
             formControlName="imagen_proyecto3"
             >
         </div>
-        <button type="submit" [disabled]="form.invalid" >
-            guardar
-        </button>
-    </form>
-</div>
+    </div>
+    <button type="submit" [disabled]="form.invalid" >
+        guardar
+    </button>
+</form>

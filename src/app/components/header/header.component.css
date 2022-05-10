@@ -1,5 +1,9 @@
-/*______________________Header Top______________________________*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Prompt:wght@400;500&family=Roboto:ital,wght@0,500;1,400&display=swap');
+.header-grid{
+    display: grid;
+    flex-direction: row;
+    height: 5vh;
+    border: none;
+}
 
 .header-top{
     background: black;
@@ -10,7 +14,12 @@
 .header-logo{
     font-size: 0.8rem;
     display:inline-block;
-    margin-left:25px;
+    margin-left:20px;
+}
+
+.img-logo{
+    background-size: cover;
+    
 }
 
 .logo-title{
@@ -39,12 +48,19 @@ ul{
     font-size: 1rem;
 }
 
-
-/*___________________Header bottom_______________________________*/
-
-
-.header-bottom{
-    color: #fff;
-    background-color: #191919;
+.closeSesion{
+    float: right;
+    font-size: 0.6em;
+    margin-right: 20px;
 }
 
+
+button{
+    background-color: #199c79;
+    color: white;
+    padding: 3px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}

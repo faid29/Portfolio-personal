@@ -1,32 +1,36 @@
 .acerca{
-    background-color: #161616;
     display: flex;
-    margin: 0;
-}
-
-h5{
-    font-size: 1rem;
+    margin: 20px;
 }
 
 .foto-perfil{
-    background-color: #191919;
+    background-color: #262626;
     border: 1px solid #262626;
     border-radius: 5px;
-    margin: 20px 10px 20px 30px;
+    margin-right: 5px;
     text-align: center;
     width: 30vw;
 }
 
+.img-perfil-foto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+}
+
 .informacion-profesional{
-    background-color: #191919;
+    background-color: #262626;
     border: 1px solid #262626;
     border-radius: 5px;
-    margin: 20px 30px 20px 0px;
+
     text-align: center;
     width: 65vw;
 }
 
 .vista-profesion{
+    align-content: center;
     margin-top: 20px;
     border-bottom: 1px solid #515152;
 }
@@ -36,6 +40,32 @@ h5{
 }
 
 /*::::::::::::::::::::::::::::::::::::::::PROFESION MEQDIA QUERY:::::::::::::::::::::::::::::::::::::::*/
+@media screen and (max-width: 992px){
+    
+    .acerca{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .foto-perfil{
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .img-perfil-foto{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 210px;
+        height: 210px;
+        border-radius: 5px;
+    }
+    
+    .informacion-profesional{
+        width: auto;
+    }
+}
+
 @media screen and (max-width: 768px){
     
     .acerca{
@@ -45,12 +75,45 @@ h5{
     
     
     .foto-perfil{
-        margin:20px 30px 20px 20px;
         width: auto;
+    }
+
+    .img-perfil-foto{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
     }
     
     .informacion-profesional{
-        margin-left: 20px;
+        width: auto;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 560px){
+    
+    .acerca{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    .foto-perfil{
+        width: auto;
+    }
+
+    .img-perfil-foto{
+        width: 180px;
+        height: 180px;
+
+    }
+    
+    .informacion-profesional{
         width: auto;
     }
 }

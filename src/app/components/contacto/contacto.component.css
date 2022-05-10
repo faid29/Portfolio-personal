@@ -1,0 +1,44 @@
+.contacto{
+    background-color: #191919;
+    color: #fff;
+    height: auto;
+}
+.contacto-col{
+    margin: 0px 50px;
+    padding-top: 30px;
+    height: auto;
+}
+
+.contacto-col-mensaje{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: 0px 20px;
+}
+
+h2{
+    font-size: 2.5rem ;
+    color: #179b76;
+}
+
+button{
+    color:#fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .contacto-col{
+        margin: 0px 50px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+
+}

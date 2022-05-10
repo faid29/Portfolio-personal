@@ -27,7 +27,8 @@ export class FormPersonaComponent implements OnInit {
       ciudad:['', [Validators.minLength(3), Validators.maxLength(20)]],
       estado_civil:['',[Validators.minLength(3),Validators.maxLength(20)]], 
       direccion:['',[Validators.minLength(3),Validators.maxLength(20)]],
-      edad:[0,[Validators.required, Validators.minLength(3),Validators.maxLength(100)]]
+      edad:[0,[Validators.required, Validators.minLength(3),Validators.maxLength(100)]],
+      foto:['']
     })
   }
 
@@ -47,7 +48,8 @@ export class FormPersonaComponent implements OnInit {
       ciudad: persona.ciudad,
       estado_civil: persona.estado_civil,
       direccion: persona.direccion,
-      edad: persona.edad
+      edad: persona.edad,
+      foto: persona.foto
     });
 
     this.mostrarForm = true;

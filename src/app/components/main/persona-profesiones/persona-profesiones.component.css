@@ -46,9 +46,10 @@
 
 .label-modal{
     background-color: #158668;
-    padding: 18 px 15px;
     border-radius: 5px;
     cursor: pointer;
+    padding: 5px;
+    color: black;
 }
 
 /*_____botones_____*/

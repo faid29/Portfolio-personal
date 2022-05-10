@@ -1,7 +1,8 @@
 footer{
-    background-color: rgba(6, 230, 6, 0.856);
     color: #fff;
-    height: 130px;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a{
@@ -15,7 +16,7 @@ a{
 
 .footer-top{
     background-color: #191919;
-    height: 80px;
+
 }
 
 
@@ -39,11 +40,11 @@ a{
 
 .footer-bottom{
     background-color: #262626;
-    height: 50px;
+
 }
 
 .text-p{
     text-align: center;
     font-size: 12px;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }

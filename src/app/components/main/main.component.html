@@ -2,28 +2,11 @@
     <div class="grid">
         <div class="col">
             <div class="div-title">
-                <h1 class="title-h1">{{ dataTitle.titulo1}} {{ persona.nombre }}<br>{{ persona.apellido}} </h1>
+                <h1 class="title-h1">{{ dataTitle.titulo1}} {{ persona.nombre }} {{ persona.apellido}} </h1>
                 <p class="title-p">{{ dataTitle.subtitulo}} </p>
             </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PERSONA ::::::::::::::::::::::::::::::::::::::: -->
-            <input type="checkbox" id="button-modal-persona">
-            <label for="button-modal-persona" class="label-modal">Editar Perfil<i class="bi bi-pencil-fill"></i></label>
-            <div class="modal">
-                <div class="contenedor">
-                    <div><button class="button-close"><label for="button-modal-persona" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
-                    <div class="nueva-persona"><button class="button-nueva" (click)="toggleForm()">Nuevo Persona</button></div> 
-                    <app-persona  
-                        [persona]="persona"
-                        (borrarS)="borrarPersona($event)"
-                        (editarS)="editarPersona($event)">
-                    </app-persona>
-                    <app-form-persona
-                    #formPersona
-                    (nuevaPersona)="crearNuevaPersona($event)">
-                </app-form-persona>
-                </div>
-            </div>
         </div>
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::BOTON MG -COMENTA-SHARE ::::::::::::::::::::::::::::::::::::::: -->
         <div class="col  col1">
             <div class="div-section" >
                 <section class="section">
@@ -35,162 +18,180 @@
                 </section>
             </div>
             <div *ngIf="showShare" class="share">
-                <div class="share-col">
-                    <ul *ngFor="let data of dataShare" class="ul ul-share">
-                        <li class="li li-share"><a href="#" class="share-link"><img class="img-share" src="{{data.url}}"/></a>{{data.titulo}}</li>
-                    </ul>
-                </div>
+                <app-boton-compartir></app-boton-compartir>
             </div>
         </div>
     </div>
+    <div class="grid-second" >
 <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PRFESION ::::::::::::::::::::::::::::::::::::::: -->
-    <div class="acerca">
-        <div class="foto-perfil">
-            <h5>{{persona.foto }} </h5>
-            <app-perfil-foto></app-perfil-foto>
-        </div>
-        <div class="informacion-profesional">
-            <div class="titulos-h5"><h5>Información profesional</h5></div>
-            <div class="vista-profesion" *ngFor="let profesion of persona.profesion">
-                <h4>{{profesion.titulo_profesion}}</h4>
-                <p>{{profesion.descripcion_profesion}}</p>
-            </div>
-            <div class="app-profesion" >
-                <app-persona-profesiones 
-                [profesiones]="persona.profesion">
-                </app-persona-profesiones>
-            </div>
-        </div>
-    </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::LABORAL ::::::::::::::::::::::::::::::::::::::: -->
-    <div class="container-laboral">
-        <div class="titulos-h5"><h5>Experiencia Laboral</h5></div>
-        <div class="col-laboral">
-            <div class="vista-laboral" *ngFor="let laboral of persona.laboral" >
-                <p class="p"><b>Nobre de la empresa: </b>{{laboral.nombre_empresa}} </p>
-                <p class="p"><b>Puesto: </b>{{laboral.puesto}}</p>
-                <p class="p"><b>Fecha: </b>{{laboral.fecha_desde}} <b>Hasta: </b>{{laboral.fecha_hasta}}</p>
-                <p class="p"><b>Tareas: </b>{{laboral.descripcion_laboral}} </p>
-            </div>
-        </div>
-        <div class="app-laboral">
-            <app-persona-laborales
-            [laborales]="persona.laboral" >
-            </app-persona-laborales>
-        </div>
-    </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::EDUCACIÓN::::::::::::::::::::::::::::::::::::::: -->
-    <div class="container-educacion">
-        <div class="titulos-h5"><h5>Educacion</h5></div>
-        <div class="col-educacion">
-            <div class="vista-educacion" *ngFor="let educacion of persona.educacion" >
-                <div> 
-                    <p class="p"><b>Nombre Institución: </b>{{educacion.nombre_institucion}} </p>
-                    <p class="p"><b>Nombre Certificación: </b>{{educacion.nombre_certificacion}}</p>
-                    <p class="p"><b>Fecha inicio: </b>{{educacion.fecha_inicio}} <b>fecha fin: </b>{{educacion.fecha_fin}}</p>
-                    <p class="p"><b>Estado: </b>{{educacion.estado}}</p>
-                    <p class="p"><b>Descripcion curso: </b>{{educacion.descripcion_curso}}</p>                  
+        <div class="acerca" id="page-1">
+            <div class="foto-perfil">
+                <div class="titulos-h5"><h5 id="page-1">{{persona.nombre}} {{persona.apellido}} </h5></div>
+                <img class="img-perfil-foto" src="{{persona.foto}}" alt="foto perfil">
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::PERSONA ::::::::::::::::::::::::::::::::::::::: -->
+                <div *ngIf="isAdmin">
+                    <input type="checkbox" id="button-modal-persona">
+                    <label for="button-modal-persona" class="label-modal">Perfil<i class="bi bi-pencil-fill"></i></label>
+                    <div class="modal">
+                        <div class="contenedor">
+                            <div><button class="button-close"><label for="button-modal-persona" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+<!--                             <div class="nueva-persona"><button class="button-nueva" (click)="toggleForm()">Nuevo Persona</button></div>  -->
+                            <app-persona  
+                                [persona]="persona"
+                                (borrarS)="borrarPersona($event)"
+                                (editarS)="editarPersona($event)">
+                            </app-persona>
+                            <app-form-persona
+                            #formPersona
+                            (nuevaPersona)="crearNuevaPersona($event)">
+                            </app-form-persona>
+                        </div>
+                    </div>
                 </div>
-                <div img-div>
-                    <img class="img-institucion" src="{{educacion.imagen_institucion}}" alt="">
+            </div>
+            <div class="informacion-profesional">
+                <div class="titulos-h5"><h5>Información profesional</h5></div>
+                <div class="vista-profesion" *ngFor="let profesion of persona.profesion">
+                    <h4>{{profesion.titulo_profesion}}</h4>
+                    <p><b></b>{{profesion.descripcion_profesion}}</p>
+                </div>
+                <div class="app-profesion" *ngIf="isAdmin" >
+                    <app-persona-profesiones 
+                    [profesiones]="persona.profesion">
+                    </app-persona-profesiones>
                 </div>
             </div>
         </div>
-        <div class="app-educacion">
-            <app-persona-educaciones
-            [educaciones]="persona.educacion" >
-            </app-persona-educaciones>
-        </div>
-    </div>
-    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::IDIOMA ::::::::::::::::::::::::::::::::::::::: -->
-    <div class="container-idioma">
-        <div class="titulos-h5"><h5>Idiomas</h5></div>
-        <div class="col-idioma">
-            <div class="vista-idioma" *ngFor="let idioma of persona.idioma" >
-                <p class="p"><b>Idioma: </b>{{idioma.nombre_idioma}} </p>
-                <p class="p"><b>Nivel: </b>{{idioma.nivel_idioma}}</p>
-            </div>
-        </div>
-        <div class="app-idioma">
-            <app-persona-idiomas
-            [idiomas]="persona.idioma" >
-            </app-persona-idiomas>
-        </div>
-    </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::SKILL ::::::::::::::::::::::::::::::::::::::: -->
-    <div class="container-skill">
-        <div class="titulos-h5"><h5>Habilidades</h5></div>
-        <div class="col-skill">
-            <div class="vista-skill" *ngFor="let skill of persona.skill" [ngStyle]="{'border-color':skill.color_skill}">
-                <div ></div>
-                <p class="p-nombre-skill">{{skill.nombre_skill}}</p>
-                <p class="p-nivel-skill">{{skill.nivel}}0%</p>
-                <p class="p-porcentaje">0%<progress min="0" max="10" value="{{skill.nivel}}"></progress>100%</p> 
-            </div>
-        </div>
-        <div class="app-skill"> 
-            <app-persona-skills
-            [skills]="persona.skill">
-            </app-persona-skills>
-        </div>
-    </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PROYECTOS ::::::::::::::::::::::::::::::::::::::: -->
-    <div class="container-proyecto">
-        <div class="titulos-h5"><h5>Idiomas</h5></div>
-        <div class="col-proyecto">
-            <div class="vista-proyecto" *ngFor="let proyecto of persona.proyecto" >
-                <div>
-                    <p class="p"><b>Proyecto: </b>{{proyecto.titulo_proyecto}} </p>
-                    <p class="p"><b>Fecha: </b>{{proyecto.fecha_proyecto}}</p>
-                    <p class="p"><b>Descripcion: </b>{{proyecto.descripcion_proyecto}}</p>
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::LABORAL ::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-laboral" id="page-2">
+            <div class="titulos-h5"><h5>Experiencia Laboral</h5></div>
+            <div class="col-laboral">
+                <div class="vista-laboral" *ngFor="let laboral of persona.laboral" >
+                    <p class="p"><b>Empresa: </b>{{laboral.nombre_empresa}} </p>
+                    <p class="p"><b>Puesto: </b>{{laboral.puesto}}</p>
+                    <p class="p"><b>Fecha: </b>{{laboral.fecha_desde}} <b>Hasta: </b>{{laboral.fecha_hasta}}</p>
+                    <p class="p"><b>Tareas: </b>{{laboral.descripcion_laboral}} </p>
                 </div>
-                <div id="slider">
-                    <input type="radio" name="slider" id="slide1" checked>
-                    <input type="radio" name="slider" id="slide2">
-                    <input type="radio" name="slider" id="slide3">
-                    <input type="radio" name="slider" id="slide4">
-                    <div id="slides">
-                        <div id="overflow">
-                            <div class="inner">
-                                <div class="slide slide_1">
-                                   <div class="slide-content">
-                                       <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
-                                   </div>
-                                </div>
-                                <div class="slide slide_2">
-                                   <div class="slide-content">
-                                        <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
-                                   </div>
-                                </div>
-                                <div class="slide slide_3">
-                                    <div class="slide-content">
-                                        <img class="img-proyecto" src="https://marketing4ecommerce.net/wp-content/uploads/2018/01/Depositphotos_3667865_m-2015-compressor.jpg" alt="">
+            </div>
+            <div class="app-laboral" *ngIf="isAdmin">
+                <app-persona-laborales
+                [laborales]="persona.laboral" >
+                </app-persona-laborales>
+            </div>
+        </div>
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::EDUCACIÓN::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-educacion" id="page-3">
+            <div class="titulos-h5"><h5>Educación</h5></div>
+            <div class="col-educacion">
+                <div class="vista-educacion" *ngFor="let educacion of persona.educacion" >
+                    <div> 
+                        <p class="p"><b>Institución: </b>{{educacion.nombre_institucion}} </p>
+                        <p class="p"><b>Certificación: </b>{{educacion.nombre_certificacion}}</p>
+                        <p class="p"><b>Fecha inicio: </b>{{educacion.fecha_inicio}} <b>fecha fin: </b>{{educacion.fecha_fin}}</p>
+                        <p class="p"><b>Estado: </b>{{educacion.estado}}</p>
+                        <p class="p"><b>Descripcion: </b>{{educacion.descripcion_curso}}</p>                  
+                    </div>
+                    <div img-div>
+                        <img class="img-institucion" src="{{educacion.imagen_institucion}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="app-educacion" *ngIf="isAdmin">
+                <app-persona-educaciones
+                [educaciones]="persona.educacion" >
+                </app-persona-educaciones>
+            </div>
+        </div>
+        <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::IDIOMA ::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-idioma" id="page-4">
+            <div class="titulos-h5"><h5>Idiomas</h5></div>
+            <div class="col-idioma">
+                <div class="vista-idioma" *ngFor="let idioma of persona.idioma" >
+                    <p class="p"><b>Idioma: </b>{{idioma.nombre_idioma}} </p>
+                    <p class="p"><b>Nivel: </b>{{idioma.nivel_idioma}}</p>
+                </div>
+            </div>
+            <div class="app-idioma" *ngIf="isAdmin">
+                <app-persona-idiomas
+                [idiomas]="persona.idioma" >
+                </app-persona-idiomas>
+            </div>
+        </div>
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::HARD SKILL ::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-skill" id="page-5">
+            <div class="titulos-h5"><h5>Hard Skill</h5></div>
+            <div class="col-skill">
+                <div class="vista-skill" *ngFor="let skill of persona.skill" [ngStyle]="{'border-color':skill.color_skill}">
+                    <p class="p-nombre-skill">{{skill.nombre_skill}}</p>
+                    <p class="p-nivel-skill">{{skill.nivel}}0%</p>
+                    <p class="p-porcentaje"><b class="b-porcentaje">0%</b><progress min="0" max="10" value="{{skill.nivel}}"></progress><b class="b-porcentaje">100%</b></p> 
+                </div>
+            </div>
+            <div class="app-skill" *ngIf="isAdmin"> 
+                <app-persona-skills
+                [skills]="persona.skill">
+                </app-persona-skills>
+            </div>
+        </div>
+<!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::PROYECTOS ::::::::::::::::::::::::::::::::::::::: -->
+        <div class="container-proyecto" id="page-6">
+            <div class="titulos-h5"><h5>Proyectos</h5></div>
+            <div class="col-proyecto">
+                <div class="vista-proyecto" *ngFor="let proyecto of persona.proyecto" >
+                    <div>
+                        <p class="p"><b>Proyecto: </b>{{proyecto.titulo_proyecto}} </p>
+                        <p class="p"><b>Fecha: </b>{{proyecto.fecha_proyecto}}</p>
+                        <p class="p"><b>Descripcion: </b>{{proyecto.descripcion_proyecto}}</p>
+                    </div>
+                    <div id="slider">
+                        <input type="radio" name="slider" id="slide1" checked>
+                        <input type="radio" name="slider" id="slide2">
+                        <input type="radio" name="slider" id="slide3">
+                        <input type="radio" name="slider" id="slide4">
+                        <div id="slides">
+                            <div id="overflow">
+                                <div class="inner">
+                                    <div class="slide slide_1">
+                                       <div class="slide-content">
+                                           <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                       </div>
                                     </div>
-                                </div>
-                                <div class="slide slide_4">
-                                    <div class="slide-content">
-                                        <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                    <div class="slide slide_2">
+                                       <div class="slide-content">
+                                            <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                       </div>
+                                    </div>
+                                    <div class="slide slide_3">
+                                        <div class="slide-content">
+                                            <img class="img-proyecto" src="https://marketing4ecommerce.net/wp-content/uploads/2018/01/Depositphotos_3667865_m-2015-compressor.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slide slide_4">
+                                        <div class="slide-content">
+                                            <img class="img-proyecto" src="{{proyecto.imagen_proyecto}}" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="controls">
-                    </div>
-                    <div id="bullets">
-                       <label for="slide1"></label>
-                       <label for="slide2"></label>
-                       <label for="slide3"></label>
-                       <label for="slide4"></label>
+                        <div id="controls">
+                        </div>
+                        <div id="bullets">
+                           <label for="slide1"></label>
+                           <label for="slide2"></label>
+                           <label for="slide3"></label>
+                           <label for="slide4"></label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="app-proyecto">
-            <app-persona-proyectos
-            [proyectos]="persona.proyecto">  
-            </app-persona-proyectos>
+            <div class="app-proyecto" *ngIf="isAdmin">
+                <app-persona-proyectos
+                [proyectos]="persona.proyecto">  
+                </app-persona-proyectos>
+            </div>
         </div>
     </div>
 </main>
+<app-footer></app-footer>
 

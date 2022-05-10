@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 
 @Component({
@@ -9,24 +10,24 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   mostrarModal: boolean = false;
-  isLogged: boolean = false
+  isLogged: boolean = true;
+  isAdmin: boolean = false; 
 
-  constructor() {
+  constructor(private tokenService : TokenService) {
 
   }
 
   ngOnInit() {
-
-
+    this.isLogged = this.tokenService. isLogged();
+    this.isAdmin = this.tokenService.isAdmin();
   }
-
 
   toggleModal() {
     this.mostrarModal = !this.mostrarModal
   }
 
-  mostrarRegistro: boolean = false;
   mostrarIniciarSesion: boolean = true;
+  mostrarRegistro: boolean = false;
   tituloRegistro: string = "Registrarse";
 
   mostrarOcultar() {
@@ -37,15 +38,16 @@ export class LoginComponent implements OnInit {
     } else {
       this.mostrarRegistro = true
       this.mostrarIniciarSesion = false;
-      this.tituloRegistro = "Iniciar Sesión";
+      this.tituloRegistro = "Iniciar Sesion";
     }
   }
 
   onLogOut():void{
+    this.tokenService.logOut();
     window.location.reload();
-
   }
 
+  
 
 
 }

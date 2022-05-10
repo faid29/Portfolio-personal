@@ -1,6 +1,15 @@
-<div class="modalDialog"  *ngIf="mostrarModal">
-	<div class="login-container">
-		<router-outlet></router-outlet>
+<div class="modalDialog" *ngIf="mostrarModal">
+	<div class="container" *ngIf="isLogged">
+		<div class="col" *ngIf="mostrarIniciarSesion">
+			<h5>Iniciar Sesion</h5>
+			<app-login-form></app-login-form>
+			<p>No tenes cuenta? <b><a (click)="mostrarOcultar()" routerLink="/register"> {{tituloRegistro}} </a></b></p>
+		</div>
+		<div class="col" *ngIf="mostrarRegistro">
+			<h5>Registro</h5>
+			<app-register-form></app-register-form>
+			<p>Tenés cuenta ?<b><a (click)="mostrarOcultar()" routerLink="/login"> {{tituloRegistro}} </a></b></p>
+		</div>
 		<a href="/home"><button type="button">Salir</button></a>
 	</div>
 </div>

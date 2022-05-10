@@ -13,13 +13,9 @@ export class MenuComponent implements OnInit {
   }
 
   showMenu:boolean = false;
+  showSubMenu:boolean = false;
 
-  dataMenu=[
-    {
-    'titulo':'PORTAFOLIO',
-    'url':'',
-    'icon':'bi bi-briefcase'
-    }, 
+  menus=[
     {
     'titulo':'QUIEN SOY',
     'url':'',
@@ -27,9 +23,43 @@ export class MenuComponent implements OnInit {
     },
     {
     'titulo':'CONTACTO',
-    'url':'',
+    'url':'contacto',
     'icon':'bi bi-telephone-outbound'
     }
  ]
+
+ subMenus=[
+  {
+  'subtitulo':'PROFESION',
+  'url':'#page-1'
+  }, 
+  {
+  'subtitulo':'LABORAL',
+  'url':'#page-2'
+  },
+  {
+  'subtitulo':'EDUCACIÓN',
+  'url':'#page-3'
+  }
+  ,
+  {
+  'subtitulo':'IDIOMA',
+  'url':'#page-4'
+  }
+  ,
+  {
+  'subtitulo':'HARD SKILL',
+  'url':'#page-5'
+  }
+  ,
+  {
+  'subtitulo':'SOFT SKILL',
+  'url':'#page-6'
+  },
+  {
+  'subtitulo':'PROYECTOS',
+  'url':'#page-7'
+  }
+]
 
 }

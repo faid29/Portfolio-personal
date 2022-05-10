@@ -25,11 +25,20 @@
 
 a{
    color: #fff; 
-   text-decoration: none;
 }
 
 a:hover{
-    color: #000;
+    color: #199c79;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h5{
+   color: #199c79;
 }
 
 button{
@@ -44,5 +53,11 @@ button{
 }
 
 
+@media screen and (max-width: 768px){
 
+    .modalDialog>div {
+        width: 80%;
+    }
+
+}
 

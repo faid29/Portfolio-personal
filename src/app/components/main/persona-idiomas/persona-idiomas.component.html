@@ -3,17 +3,23 @@
 <label for="button-modal-idioma" class="label-modal">Editar<i class="bi bi-pencil-fill"></i></label>
 <div class="modal">
     <div class="contenedor">
-        <div><button class="button-close"><label for="button-modal-idioma" class="label-close"><i class="bi bi-x-lg"></i></label></button><br></div> 
+        <div>
+            <button class="button-close">
+                <label for="button-modal-idioma" class="label-close">
+                    <i class="bi bi-x-lg"></i>
+                </label>
+            </button><br>
+        </div> 
         <div class="nueva-idioma"><button class="button-nueva" (click)="toggleForm()">Nueva Profesion</button></div> 
+        <app-idioma  
+        *ngFor="let idioma of idiomas"
+        [idioma]="idioma"
+        (borrarS)="borrarIdioma($event)"
+        (editarS)="editarIdioma($event)">
+        </app-idioma>
         <app-form-idioma
             #formIdioma
             (nuevaIdioma)="crearNuevaIdioma($event)">
         </app-form-idioma>
-        <app-idioma  
-            *ngFor="let idioma of idiomas"
-            [idioma]="idioma"
-            (borrarS)="borrarIdioma($event)"
-            (editarS)="editarIdioma($event)">
-        </app-idioma>
     </div>
 </div>

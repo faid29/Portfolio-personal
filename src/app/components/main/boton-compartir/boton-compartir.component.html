@@ -1,0 +1,9 @@
+<div class="share-col">
+    <ul *ngFor="let share of shareData" class="ul ul-share">
+        <li class="li li-share">
+            <a href="{{share.a}} " class="share-link" target="_blank">
+                <img class="img-share" src="{{share.url}}"/>
+            </a>{{share.titulo}}
+        </li>
+    </ul>
+</div>

@@ -3,6 +3,7 @@ div{
     background-color: #262626;
     border: none;
 }
+
 form input[type="text"], input[type="password"] {
     background-color: #fff;
     text-align: center;
@@ -31,4 +32,3 @@ button{
     clear: both;
     border: solid 1px;
 }
-

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
+import { TokenService } from 'src/app/services/token.service';
 import { FormPersonaComponent } from './form-persona/form-persona.component';
 
 
@@ -24,13 +25,17 @@ export class MainComponent implements OnInit {
      "proyecto":[{id:0, titulo_proyecto:'', fecha_proyecto:'', imagen_proyecto:'',imagen_proyecto1:'',imagen_proyecto2:'',imagen_proyecto3:'', descripcion_proyecto:''}]
     };
 
- 
-  constructor( private personaService: PersonaService){
+    isAdmin = false;
+
+  constructor( private personaService: PersonaService, private tokenService: TokenService ){
     this.getPersona()
   
+
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isAdmin = this.tokenService.isAdmin();
+  }
 
   getPersona(){
     this.personaService.getPersona().subscribe( persona => {
@@ -56,26 +61,32 @@ export class MainComponent implements OnInit {
     {
       'tiulo':'Facebook',
       'url':'https://img.icons8.com/fluency/48/000000/facebook-new.png',
+      'a':'https://www.facebook.com/sharer/sharer.php?u=https://espai.es',
     },
     {
       'titulo':'Linkedln',
-      'url':'https://img.icons8.com/fluency/48/000000/linkedin.png'
+      'url':'https://img.icons8.com/fluency/48/000000/linkedin.png',
+      'a':'https://www.linkedin.com/sharing/share-offsite/?url=https://espai.es',
     },
     {
       'tiulo':'Git',
       'url':'https://img.icons8.com/fluency/48/000000/github.png',
+      'a':'https://www.linkedin.com/sharing/share-offsite/?url=https://espai.es',
     },
     { 
     'titulo':'Google',
-    'url':'https://img.icons8.com/fluency/48/000000/google-plus.png'
+    'url':'https://img.icons8.com/fluency/48/000000/google-plus.png',
+    'a':'https://twitter.com/intent/tweet?text=[text]&url=[url]&hashtags=[hashtag]"',
     },
     {
       'titulo':'Whatsapp',
-      'url':'https://img.icons8.com/fluency/48/000000/whatsapp.png'
+      'url':'https://img.icons8.com/fluency/48/000000/whatsapp.png',
+      'a':'https://api.whatsapp.com/send?text=[Hola soy Rubén Sarco, estás compartiendo mi portafolio]',
     },
     {
       'titulo':'Telegram',
-      'url':'https://img.icons8.com/color/48/000000/telegram-app--v3.png'
+      'url':'https://img.icons8.com/color/48/000000/telegram-app--v3.png',
+      'a':'https://xn--r1a.link/share/url?url=https%3A%2F%2Fwww.facebook.com%2Fcreditos.anatuya.5&text=hola',
     }
   ]
 

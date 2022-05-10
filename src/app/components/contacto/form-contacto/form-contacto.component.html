@@ -1,0 +1,25 @@
+<form #formContacto [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="mostrarForm">
+    <div class="div-col">
+        <div class="div-row div-input">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" class="form-control" formControlName="nombre" type="text"
+                placeholder="Nombre">
+        </div>
+        <div class="div-row div-input">
+            <label for="asunto">Asunto: </label>
+            <input id="asunto" class="form-control" formControlName="asunto" type="text" placeholder="Asunto">
+        </div>
+        <div class="div-row div-input">
+            <label for="email">Email: </label>
+            <input id="email" class="form-control" formControlName="email" type="email" placeholder="Email">
+        </div>
+        <div class="div-row div-input">
+            <label for="mensaje">Mensaje: </label>
+            <textarea id="mensaje" class="form-control" formControlName="mensaje" type="textarea" cols="2 "rows="2" placeholder="Mensaje">
+            </textarea>
+        </div>
+    </div>
+    <button type="submit" [disabled]="form.invalid">
+        Enviar
+    </button>
+</form>

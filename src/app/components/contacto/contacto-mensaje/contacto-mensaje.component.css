@@ -1,12 +1,10 @@
-
-.contacto-mensaje{
+.contacto-mensaje {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
-
 }
 
-.contacto-title{
+.contacto-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -14,22 +12,18 @@
     padding: 10px 10px;
 }
 
-
-.contacto-button{
+.contacto-button {
     display: flex;
     flex-direction: row;
-    margin:auto;
+    margin: auto;
 }
 
 b{
     color: #179b76;
 }
 
-
-
 button{
-    
-    color:#fff;
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -39,9 +33,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .contacto-mensaje{
+    .contacto-mensaje {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;
@@ -51,7 +45,7 @@ button{
         flex-direction: column;
     }
 
-    .contacto-title{
+    .contacto-title {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -61,9 +55,9 @@ button{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .contacto-title{
+    .contacto-title {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -72,9 +66,9 @@ button{
     }
 }
 
-@media screen and (max-width: 468px){
+@media screen and (max-width: 468px) {
 
-    .contacto-title{
+    .contacto-title {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;

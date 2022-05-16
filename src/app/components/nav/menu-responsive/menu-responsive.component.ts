@@ -20,34 +20,34 @@ export class MenuResponsiveComponent implements OnInit {
   subMenus=[
     {
     'subtitulo':'PROFESION',
-    'url':'#page-1'
+    'url':'/main#page-1'
     }, 
     {
     'subtitulo':'LABORAL',
-    'url':'#page-2'
+    'url':'/main#page-2'
     },
     {
     'subtitulo':'EDUCACIÓN',
-    'url':'#page-3'
+    'url':'/main#page-3'
     }
     ,
     {
     'subtitulo':'IDIOMA',
-    'url':'#page-4'
+    'url':'/main#page-4'
     }
     ,
     {
     'subtitulo':'HARD SKILL',
-    'url':'#page-5'
+    'url':'/main#page-5'
     }
     ,
     {
     'subtitulo':'SOFT SKILL',
-    'url':'#page-6'
+    'url':'/main#page-6'
     },
     {
     'subtitulo':'PROYECTOS',
-    'url':'#page-7'
+    'url':'/main#page-7'
     }
   ]
 

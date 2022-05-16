@@ -1,9 +1,9 @@
-.acerca{
+.acerca {
     display: flex;
     margin: 20px;
 }
 
-.foto-perfil{
+.foto-perfil {
     background-color: #262626;
     border: 1px solid #262626;
     border-radius: 5px;
@@ -12,7 +12,7 @@
     width: 30vw;
 }
 
-.img-perfil-foto{
+.img-perfil-foto {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 220px;
@@ -20,7 +20,7 @@
     border-radius: 5px;
 }
 
-.informacion-profesional{
+.informacion-profesional {
     background-color: #262626;
     border: 1px solid #262626;
     border-radius: 5px;
@@ -29,91 +29,92 @@
     width: 65vw;
 }
 
-.vista-profesion{
+.vista-profesion {
     align-content: center;
     margin-top: 20px;
     border-bottom: 1px solid #515152;
 }
-.app-profesion{
+
+.app-profesion {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 /*::::::::::::::::::::::::::::::::::::::::PROFESION MEQDIA QUERY:::::::::::::::::::::::::::::::::::::::*/
-@media screen and (max-width: 992px){
-    
-    .acerca{
+@media screen and (max-width: 992px) {
+
+    .acerca {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .foto-perfil{
+
+
+    .foto-perfil {
         width: auto;
         margin-bottom: 10px;
     }
 
-    .img-perfil-foto{
+    .img-perfil-foto {
         margin-top: 10px;
         margin-bottom: 10px;
         width: 210px;
         height: 210px;
         border-radius: 5px;
     }
-    
-    .informacion-profesional{
+
+    .informacion-profesional {
         width: auto;
     }
 }
 
-@media screen and (max-width: 768px){
-    
-    .acerca{
+@media screen and (max-width: 768px) {
+
+    .acerca {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .foto-perfil{
+
+
+    .foto-perfil {
         width: auto;
     }
 
-    .img-perfil-foto{
+    .img-perfil-foto {
         margin-top: 10px;
         margin-bottom: 10px;
         width: 200px;
         height: 200px;
         border-radius: 5px;
     }
-    
-    .informacion-profesional{
+
+    .informacion-profesional {
         width: auto;
     }
 
-    h4{
+    h4 {
         font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 560px){
-    
-    .acerca{
+@media screen and (max-width: 560px) {
+
+    .acerca {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    .foto-perfil{
+
+
+    .foto-perfil {
         width: auto;
     }
 
-    .img-perfil-foto{
+    .img-perfil-foto {
         width: 180px;
         height: 180px;
 
     }
-    
-    .informacion-profesional{
+
+    .informacion-profesional {
         width: auto;
     }
 }

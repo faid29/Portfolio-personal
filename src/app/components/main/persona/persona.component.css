@@ -1,15 +1,14 @@
-
-.persona{
+.persona {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
     margin: 20px;
     text-align: left;
-/*     display: flex;
+    /*     display: flex;
     justify-content: space-between; */
 }
 
-.persona-title{
+.persona-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -18,28 +17,28 @@
 }
 
 
-.persona-button{
+.persona-button {
     display: flex;
     flex-direction: row;
-    margin:auto;
+    margin: auto;
 }
 
-.img-perfil{
-    width:100px;
+.img-perfil {
+    width: 100px;
     height: 100px;
     background-size: cover;
 }
 
 
-b{
+b {
     color: #179b76;
 }
 
 
 
-button{
-    
-    color:#fff;
+button {
+
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -49,9 +48,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .persona{
+    .persona {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;
@@ -61,7 +60,7 @@ button{
         flex-direction: column;
     }
 
-    .persona-title{
+    .persona-title {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -71,9 +70,9 @@ button{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .persona-title{
+    .persona-title {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;

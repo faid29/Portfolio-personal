@@ -1,44 +1,49 @@
-.div-col{
+.div-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 10px;
     margin-bottom: 10px;
-    
+
 }
 
-.div-row{
+.div-row {
     text-align: left;
     margin: 0 20px;
     display: flex;
     flex-direction: column;
 }
 
-.div-input input[type="text"], .div-input input[type="password"],
- .div-input input[type="email"], .div-input input[type="number"],
- .div-input input[type="tel"], .div-input select{
+.div-input input[type="text"],
+.div-input input[type="password"],
+.div-input input[type="email"],
+.div-input input[type="number"],
+.div-input input[type="tel"],
+.div-input select {
     text-align: center;
     border: 1px solid #262626;
     border-radius: 4px;
     height: 35px;
 
 }
-.div-input input[type="text"]:focus, .div-input input[type="password"]:focus {
+
+.div-input input[type="text"]:focus,
+.div-input input[type="password"]:focus {
     border: 1px solid #10a7d5;
     background-color: #fff7e6;
     outline: 0;
 }
 
-.alerta{
+.alerta {
     font-size: 0.7rem;
     background-color: #fa8585;
     border-radius: 5px;
     color: #262626;
 }
 
-button{
-    color:#fff;
-    margin:0;
+button {
+    color: #fff;
+    margin: 0;
     border: none;
     border-radius: 5px;
     background-color: #158668;
@@ -47,18 +52,18 @@ button{
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .div-col{
+    .div-col {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .div-col{
+    .div-col {
         display: grid;
         grid-template-columns: 1fr;
     }

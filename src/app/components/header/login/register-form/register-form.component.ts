@@ -1,5 +1,4 @@
-import { Component, OnInit} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NuevoUsuario } from 'src/app/model/nuevoUsuario';
@@ -42,10 +41,10 @@ export class RegisterFormComponent implements OnInit {
         this.reloadPage();
 
       },
-      error:err => {
+      error: err => {
         this.errMsj = err.error.mensaje;
         this.toastr.error(this.errMsj, 'Fail', {
-          timeOut: 3000,  positionClass: 'toast-top-center',
+          timeOut: 3000, positionClass: 'toast-top-center',
         });
       }
     });

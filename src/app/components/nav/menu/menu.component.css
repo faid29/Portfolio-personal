@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Prompt:wght@400;500&family=Roboto:ital,wght@0,500;1,400&display=swap');
 
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     background: linear-gradient(-45deg, #262626, #151515, #191919, #293535);
@@ -10,79 +10,83 @@
     height: 9vh;
 }
 
-.nav-menu{
+.nav-menu {
     margin-right: 30px;
 }
 
 /* :::::: ICON MENU PRINCIPAL::::::: */
-.nav-home{
+.nav-home {
     margin-left: 20px;
 }
 
-.nav-home-link{
+.nav-home-link {
     font-size: 1rem;
-   
+
 }
 
-.home-icon{
+.home-icon {
     font-size: 2rem;
     color: #21DBAA;
 }
+
 /* ::::::::::::::::::: */
 
 /* ::::::::TITULO MENU PRINCIPAL:::::::::::: */
-.nav-ul{
+.nav-ul {
     display: flex;
     margin-top: 12px;
 
 }
-.nav-li{
+
+.nav-li {
 
     list-style: none;
     padding: 0px 10px;
 }
 
-.nav-li-a{
-    font-family:'Roboto','Medium 500';
+.nav-li-a {
+    font-family: 'Roboto', 'Medium 500';
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
     padding-left: 10px;
 }
+
 /* ::::::::::::::::::::::: */
 
 /* ::::::::NAV DROP:::::::::::: */
-.nav-drop-ul{
+.nav-drop-ul {
     position: absolute;
     display: flex;
     width: 100%;
     background-color: black;
-    justify-content:space-around;
+    justify-content: space-around;
     opacity: 0.5;
     transition: height 2s;
 }
 
-.nav-drop-li{
+.nav-drop-li {
     list-style: none;
 }
 
-.nav-drop-a{
-    font-family:'Roboto','Medium 500';
+.nav-drop-a {
+    font-family: 'Roboto', 'Medium 500';
     text-decoration: none;
     color: #fff;
 
 }
+
 /* ::::::::::::::::::::::: */
 
 
 @media screen and (max-width: 992px) {
 
-.nav{
-    display: none;
-}
+    .nav {
+        display: none;
+    }
 
-.nav-drop-ul{
-  display: none;
-}
+    .nav-drop-ul {
+        display: none;
+    }
 
 }

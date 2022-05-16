@@ -13,31 +13,28 @@ import { PersonaProfesionesComponent } from './components/main/persona-profesion
 import { PersonaProyectosComponent } from './components/main/persona-proyectos/persona-proyectos.component';
 import { PersonaSkillsComponent } from './components/main/persona-skills/persona-skills.component';
 import { PersonaComponent } from './components/main/persona/persona.component';
+import { PersonaSoftsComponent } from './components/main/persona-softs/persona-softs.component';
 import { LoginGuard } from './guards/login.guard';
 import { ProdGuardService } from './guards/prod-guard.service';
-import { FormContactoComponent } from './components/contacto/form-contacto/form-contacto.component';
-import { ContactoMensajeComponent } from './components/contacto/contacto-mensaje/contacto-mensaje.component';
+
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: MainComponent },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
   { path: 'header', component: HeaderComponent },
-  { path: 'home', component: LoginFormComponent, canActivate: [LoginGuard] },
-  { path: 'home', component: RegisterFormComponent, canActivate: [LoginGuard] },
-  { path: 'home', component: LoginComponent },
+  { path: 'login', component: LoginFormComponent, canActivate: [LoginGuard] },
+  { path: 'register', component: RegisterFormComponent, canActivate: [LoginGuard] },
+  { path: 'login', component: LoginComponent },
   { path: 'contacto', component: ContactoComponent},
-  { path: 'contacto', component: FormContactoComponent},
-  { path: 'contacto', component: ContactoMensajeComponent},
   { path: 'persona', component: PersonaComponent }, 
   { path: 'profesion', component: PersonaProfesionesComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
   { path: 'laboral', component: PersonaLaboralesComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
   { path: 'educacion', component: PersonaEducacionesComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
   { path: 'idioma', component: PersonaIdiomasComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
   { path: 'skill', component: PersonaSkillsComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
-  { path: 'proyecto', component: PersonaProyectosComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
-
-  /* {path:'**', component: PageNotFoundComponent} */
+  { path: 'soft', component: PersonaSoftsComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
+  { path: 'proyecto', component: PersonaProyectosComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } }
 ];
 
 @NgModule({

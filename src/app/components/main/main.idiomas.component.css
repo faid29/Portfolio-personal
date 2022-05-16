@@ -1,8 +1,8 @@
-.container-idioma{
-    margin: 20px 20px 20px 20px ;
+.container-idioma {
+    margin: 20px 20px 20px 20px;
 }
 
-.col-idioma{
+.col-idioma {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -10,15 +10,15 @@
     border-radius: 5px;
 }
 
-.vista-idioma{
-    text-align:center;
+.vista-idioma {
+    text-align: center;
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
     padding-right: 10px;
 }
 
-.app-idioma{
+.app-idioma {
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 768px) {
 
-    .col-idioma{
+    .col-idioma {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -34,16 +34,16 @@
         border-radius: 5px;
     }
 
-    
+
 }
 
 @media screen and (max-width: 363px) {
 
-    .col-idioma{
+    .col-idioma {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
 
-    
+
 }

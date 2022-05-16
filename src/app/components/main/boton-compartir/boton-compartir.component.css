@@ -1,15 +1,14 @@
-
-.share-col{
+.share-col {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: auto;
 }
 
-.ul-share{
+.ul-share {
     margin-bottom: 0;
 }
 
-.li-share{
+.li-share {
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -18,106 +17,107 @@
     text-align: center;
 }
 
-.share-link{
+.share-link {
     font-size: 12px;
     padding-bottom: 10px;
 }
 
-.img-share{
+.img-share {
     width: 40px;
 }
 
-li{
+li {
     list-style: none;
 }
+
 /*::::::::::::::::::::::::::::::::::::::::MEDIA QUERY::::::::::::::::::::::::::::::::::::::::*/
 
-@media screen and (max-width: 1200px){
-    
-    .title-h1{
+@media screen and (max-width: 1200px) {
+
+    .title-h1 {
         font-size: 4rem;
     }
-    
-    .title-p{
+
+    .title-p {
         font-size: 1.3rem;
     }
-    
-    .div-section{
+
+    .div-section {
         margin-left: 11vw;
     }
-    
-    .li{
+
+    .li {
         font-size: 0.8rem;
     }
 
-    button{
+    button {
         font-size: 1.5rem;
     }
-    
+
     /*_________________________________Button shared/like/coment_____________________________*/
-    
-    .img-share{
+
+    .img-share {
         width: 25px;
     }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
     /*_________________________________Button shared/like/coment_____________________________*/
 
-    .share{
+    .share {
         margin-left: 11vw;
         width: 220px;
     }
-    
-    .share-col{
+
+    .share-col {
         display: grid;
         grid-template-columns: 100px 100px;
         grid-template-rows: auto;
     }
 
-    .img-share{
+    .img-share {
         width: 22px;
     }
 }
 
-@media screen and (max-width: 768px){
-    .ul{
+@media screen and (max-width: 768px) {
+    .ul {
         padding-left: 0;
     }
-    
-    .li{
+
+    .li {
         font-size: 0.5rem;
         list-style: none;
     }
-    
-    .share{
+
+    .share {
         margin-left: 0vw;
         width: 100px;
     }
 
-    .share-col{
+    .share-col {
         display: grid;
         grid-template-columns: 50px 50px;
         grid-template-rows: auto;
     }
-    
-    .ul-share{
+
+    .ul-share {
         margin-bottom: 0;
         padding-left: 4px;
-      
+
     }
-    
-    .li-share{
+
+    .li-share {
         margin-right: 8px;
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 0.4rem;
-        
+
     }
 
-    .img-share{
+    .img-share {
         width: 15px;
-    } 
-    
+    }
+
 }

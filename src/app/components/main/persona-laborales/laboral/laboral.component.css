@@ -1,15 +1,14 @@
-
-.laboral{
+.laboral {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
     margin: 20px;
     text-align: left;
-/*     display: flex;
+    /*     display: flex;
     justify-content: space-between; */
 }
 
-.laboral-title{
+.laboral-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -18,19 +17,19 @@
 }
 
 
-.laboral-button{
+.laboral-button {
     display: flex;
     flex-direction: row;
-    margin:auto;
+    margin: auto;
 }
 
-b{
+b {
     color: #179b76;
 }
 
-button{
-    
-    color:#fff;
+button {
+
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -40,9 +39,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .laboral{
+    .laboral {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;
@@ -52,7 +51,7 @@ button{
         flex-direction: column;
     }
 
-    .laboral-title{
+    .laboral-title {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -62,9 +61,9 @@ button{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    .laboral-title{
+    .laboral-title {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;

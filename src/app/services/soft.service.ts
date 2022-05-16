@@ -8,7 +8,7 @@ import { Soft } from '../model/soft.model';
 })
 export class SoftService {
 
-  URL = "http://localhost:8080/api/persona/soft/";
+  URL = "https://frozen-fjord-36122.herokuapp.com/api/persona/soft/";
   
   constructor(private http: HttpClient) { }
 

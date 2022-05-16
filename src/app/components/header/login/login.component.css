@@ -1,4 +1,3 @@
-
 .modalDialog {
     position: fixed;
     top: 0;
@@ -12,7 +11,7 @@
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
 
-}   
+}
 
 .modalDialog>div {
     width: 50%;
@@ -23,25 +22,25 @@
     background: #262626
 }
 
-a{
-   color: #fff; 
+a {
+    color: #fff;
 }
 
-a:hover{
+a:hover {
     color: #199c79;
 }
 
-.col{
+.col {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-h5{
-   color: #199c79;
+h5 {
+    color: #199c79;
 }
 
-button{
+button {
     background-color: #199c79;
     color: white;
     padding: 10px 20px;
@@ -53,11 +52,10 @@ button{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
     .modalDialog>div {
         width: 80%;
     }
 
 }
-

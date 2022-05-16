@@ -49,6 +49,7 @@ import { SoftComponent } from './components/main/persona-softs/soft/soft.compone
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +89,6 @@ import { SoftComponent } from './components/main/persona-softs/soft/soft.compone
     PersonaSoftsComponent,
     FormSoftComponent,
     SoftComponent,
-
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,11 @@
-main{
+main {
     color: #fff;
     background-color: #21DBAA;
     margin: 0;
     padding: 0;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
@@ -22,19 +22,21 @@ main{
 
 @keyframes changeBG {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
 
 /*_________termina el background gradiente________________*/
 
-.grid-second{
+.grid-second {
     display: flex;
     flex-direction: column;
     grid-template-columns: 100vw;
@@ -45,37 +47,37 @@ main{
     background: hsla(270, 94%, 25%, 1);
 
     background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
-    
+
     background: -moz-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
-    
+
     background: -webkit-linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#42047E", endColorstr="#07F49E", GradientType=1 );
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#42047E", endColorstr="#07F49E", GradientType=1);
 }
 
-.col{
+.col {
     padding: 1em;
     gap: 2px;
     height: 85vh;
 }
 
-.div-title{
+.div-title {
     margin-left: 4vw;
     margin-top: 10vh;
-    text-align:left;
+    text-align: left;
     position: relative;
     overflow: hidden;
 }
 
-.title-h1{
+.title-h1 {
     font-size: 5rem;
 }
 
-.title-p{
+.title-p {
     font-size: 1.5rem;
 }
 
-.div-section{
+.div-section {
     margin-top: 10vh;
     margin-left: 20vw;
     margin-bottom: 5px;
@@ -84,28 +86,28 @@ main{
     border-radius: 5px;
 }
 
-.ul{
+.ul {
     list-style: none;
     text-align: justify;
 }
 
-.li{
+.li {
     margin-bottom: 20px;
 }
 
-button{
+button {
     font-size: 2rem;
     border: none;
     background-color: #262626;
     border-radius: 5px;
 }
 
-.titulos-h5{
+.titulos-h5 {
     text-align: center;
     background-color: #090909;
 }
 
-h5{
+h5 {
     font-size: 1.2rem;
     text-align: center;
 }
@@ -113,7 +115,7 @@ h5{
 /*_________________________________Button shared/like/coment_____________________________*/
 
 
-.share{
+.share {
     background-color: #262626;
     margin-left: 20vw;
     width: auto;
@@ -124,31 +126,31 @@ h5{
 
 /*::::::::::::::::::::::::::::::::::::::::MEDIA QUERY::::::::::::::::::::::::::::::::::::::::*/
 
-@media screen and (max-width: 1200px){
-    
-    .title-h1{
+@media screen and (max-width: 1200px) {
+
+    .title-h1 {
         font-size: 4rem;
     }
-    
-    .title-p{
+
+    .title-p {
         font-size: 1.3rem;
     }
-    
-    .div-section{
+
+    .div-section {
         margin-left: 11vw;
     }
-    
-    .li{
+
+    .li {
         font-size: 0.8rem;
     }
 
-    button{
+    button {
         font-size: 1.5rem;
     }
-    
+
     /*_________________________________Button shared/like/coment_____________________________*/
-    
-    .share{
+
+    .share {
         background-color: #262626;
         margin-left: 14vw;
         width: auto;
@@ -157,47 +159,47 @@ h5{
 
 }
 
-@media screen and (max-width: 992px){
-    
-    .title-h1{
+@media screen and (max-width: 992px) {
+
+    .title-h1 {
         font-size: 3.1rem;
     }
 
     /*_________________________________Button shared/like/coment_____________________________*/
 
-    .share{
+    .share {
         margin-left: 11vw;
         width: 220px;
     }
 
 }
 
-@media screen and (max-width: 768px){
-    
-    .grid{
+@media screen and (max-width: 768px) {
+
+    .grid {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: 80vh;
-    
+
     }
-    
-    .div-title{
+
+    .div-title {
         margin-top: 20vh;
         margin-left: 2vw;
-        text-align:left;
+        text-align: left;
         position: relative;
         overflow: hidden;
     }
-    
-    .title-h1{
+
+    .title-h1 {
         font-size: 2rem;
     }
-    
-    .title-p{
+
+    .title-p {
         font-size: 0.7rem;
     }
-    
-    .div-section{
+
+    .div-section {
         margin-top: 20vh;
         margin-left: 0;
         margin-bottom: 5px;
@@ -205,30 +207,25 @@ h5{
         width: 30vw;
         border-radius: 5px;
     }
-    
-    .ul{
+
+    .ul {
         padding-left: 0;
     }
-    
-    .li{
+
+    .li {
         font-size: 0.5rem;
     }
-    
-    button{
+
+    button {
         font-size: 0.8rem;
         border-radius: 3px;
     }
-    
+
     /*_________________________________Button shared/like/coment_____________________________*/
-    
-    .share{
+
+    .share {
         margin-left: 0vw;
         width: 100px;
     }
-    
+
 }
-
-
-
-
-

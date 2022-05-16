@@ -8,7 +8,7 @@ import { Laboral } from '../model/laboral.model';
 })
 export class LaboralService {
 
-  URL = "http://localhost:8080/api/persona/laboral/";
+  URL = "https://frozen-fjord-36122.herokuapp.com/api/persona/laboral/";
   constructor(private http: HttpClient) { }
 
   nuevaLaboral(laboral: Laboral): Observable<Laboral> {

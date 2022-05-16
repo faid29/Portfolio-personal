@@ -8,7 +8,7 @@ import { Contacto } from '../model/contacto.model';
 })
 export class ContactoService {
 
-  URL='http://localhost:8080/api/contacto/'
+  URL='https://frozen-fjord-36122.herokuapp.com/api/contacto/'
   
 
   constructor(private http: HttpClient) { 

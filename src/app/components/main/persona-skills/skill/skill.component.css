@@ -1,5 +1,4 @@
-
-.skill{
+.skill {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
@@ -10,26 +9,26 @@
     justify-content: space-between;
 }
 
-.skill-title{
+.skill-title {
     padding: 10px 10px;
 }
 
-img{
+img {
     object-fit: contain;
     max-width: 100px;
 }
 
-.skill-button{
-    margin:auto;
+.skill-button {
+    margin: auto;
 }
 
-b{
+b {
     color: #179b76;
 }
 
-button{
-    
-    color:#fff;
+button {
+
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -39,9 +38,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .skill{
+    .skill {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;

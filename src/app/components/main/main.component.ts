@@ -50,7 +50,9 @@ export class MainComponent implements OnInit {
 
   contador:number = 0;
   
-  estadoHeart:boolean = true;
+  status:boolean = false;
+
+
 
   dataTitle=
     {

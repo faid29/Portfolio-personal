@@ -6,6 +6,7 @@ import { Contacto } from 'src/app/model/contacto.model';
   templateUrl: './contacto-mensaje.component.html',
   styleUrls: ['./contacto-mensaje.component.css']
 })
+
 export class ContactoMensajeComponent implements OnInit {
 
   @Input() contacto: Contacto;

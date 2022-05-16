@@ -10,7 +10,7 @@ import { Persona } from '../model/persona.model';
 })
 
 export class PersonaService {
-  URL='http://localhost:8080/api/persona/'
+  URL='https://frozen-fjord-36122.herokuapp.com/api/persona/'
   
 
   constructor(private http: HttpClient) { 

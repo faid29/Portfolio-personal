@@ -1,11 +1,11 @@
-footer{
+footer {
     color: #fff;
     height: 7vh;
     display: flex;
     flex-direction: column;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
@@ -14,36 +14,36 @@ a{
 /*_____________________________________Footer top___________________________________*/
 
 
-.footer-top{
+.footer-top {
     background-color: #191919;
 
 }
 
 
-.ul{
+.ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style: none;
 }
 
-.li{
+.li {
     padding-right: 20px;
 }
 
-.footer-link-icon{
+.footer-link-icon {
     font-size: 30px;
 }
 
 /*_____________________________Footer bottom____________________________________________*/
 
 
-.footer-bottom{
+.footer-bottom {
     background-color: #262626;
 
 }
 
-.text-p{
+.text-p {
     text-align: center;
     font-size: 12px;
     padding-bottom: 5px;

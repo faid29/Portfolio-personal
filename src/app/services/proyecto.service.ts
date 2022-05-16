@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto.model';
 })
 export class ProyectoService {
 
-  URL = "http://localhost:8080/api/persona/proyecto/";
+  URL = "https://frozen-fjord-36122.herokuapp.com/api/persona/proyecto/";
   
   constructor(private http: HttpClient) { }
 

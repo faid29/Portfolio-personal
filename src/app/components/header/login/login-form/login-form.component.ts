@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 import { LoginUsuario } from 'src/app/model/loginUsuario';
 
@@ -11,7 +10,7 @@ import { LoginUsuario } from 'src/app/model/loginUsuario';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  
+
 
   loginUsuario: LoginUsuario;
   nombreUsuario: string;
@@ -21,12 +20,10 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
-    private router: Router,
-    private toastr: ToastrService
-  ) { }
+    private toastr: ToastrService) { }
 
   ngOnInit() {
-  }
+}
 
   onLogin(): void {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
@@ -42,7 +39,7 @@ export class LoginFormComponent implements OnInit {
       error: err => {
         this.errMsj = err.error.message;
         this.toastr.error(this.errMsj, 'Fail', {
-          timeOut: 3000,  positionClass: 'toast-top-center',
+          timeOut: 3000, positionClass: 'toast-top-center',
         });
       }
     });
@@ -52,7 +49,7 @@ export class LoginFormComponent implements OnInit {
     window.location.reload();
   }
 
-  logOut(){
+  logOut() {
     window.sessionStorage.clear();
     this.reloadPage()
   }

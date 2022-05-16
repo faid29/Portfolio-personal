@@ -1,5 +1,4 @@
-
-.proyecto{
+.proyecto {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
@@ -9,21 +8,22 @@
     justify-content: space-between;
 }
 
-.proyecto-title{
+.proyecto-title {
     padding: 10px 10px;
 }
 
 
-.proyecto-button{
-    margin:auto;
+.proyecto-button {
+    margin: auto;
 }
 
-b{
+b {
     color: #179b76;
 }
-button{
-    
-    color:#fff;
+
+button {
+
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -33,9 +33,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .proyecto{
+    .proyecto {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;

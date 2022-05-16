@@ -8,7 +8,7 @@ import { Profesion } from '../model/profesion.model';
 })
 export class ProfesionService {
 
-  URL = "http://localhost:8080/api/persona/profesion/";
+  URL = "https://frozen-fjord-36122.herokuapp.com/api/persona/profesion/";
   constructor(private http: HttpClient) { }
 
   nuevaProfesion(profesion: Profesion): Observable<Profesion> {

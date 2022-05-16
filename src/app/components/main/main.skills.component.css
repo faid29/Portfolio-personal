@@ -1,8 +1,8 @@
-.container-skill{
-    margin: 0px 20px 0px 20px ;
+.container-skill {
+    margin: 0px 20px 0px 20px;
 }
 
-.col-skill{
+.col-skill {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -11,9 +11,9 @@
 
 }
 
-.vista-skill{
+.vista-skill {
     display: block;
-    text-align:center;
+    text-align: center;
     padding: 0;
     margin: 0;
     background-color: #191919;
@@ -22,20 +22,20 @@
     padding-right: 10px;
 }
 
-.p-nombre-skill{
+.p-nombre-skill {
     font-size: 2rem;
 }
 
-.p-nivel-skill{
+.p-nivel-skill {
     font-size: 1.5rem;
 }
 
-progress{
+progress {
     width: 1fr;
     height: 40px;
 }
 
-.app-skill{
+.app-skill {
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -44,114 +44,111 @@ progress{
 
 @media screen and (max-width: 1200px) {
 
-    .col-skill{
+    .col-skill {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-     }
+    }
 }
 
 @media screen and (max-width: 992px) {
 
-    .col-skill{
+    .col-skill {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-    
+
     }
 
-    .p-nombre-skill{
+    .p-nombre-skill {
         font-size: 1.9rem;
     }
-    
-    .p-nivel-skill{
+
+    .p-nivel-skill {
         font-size: 1.4rem;
     }
 
-    .p-porcentaje{
+    .p-porcentaje {
         font-size: 0.8rem;
     }
 
-    progress{
+    progress {
         width: 1fr;
         height: 35px;
     }
-    
+
 }
 
 @media screen and (max-width: 768px) {
 
-    .vista-skill{
+    .vista-skill {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
 
-    .col-skill{
+    .col-skill {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-    
+
     }
 
-    .p-nombre-skill{
+    .p-nombre-skill {
         font-size: 1.8rem;
     }
-    
-    .p-nivel-skill{
+
+    .p-nivel-skill {
         font-size: 1.3rem;
     }
 
-    progress{
+    progress {
         width: 1fr;
         height: 30px;
     }
-    
-    
+
+
 }
 
 @media screen and (max-width: 540px) {
 
-    .col-skill{
+    .col-skill {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         gap: 0.5rem;
 
         border-radius: 5px;
-    
+
     }
 
-    
-    
-    .vista-skill{
+
+
+    .vista-skill {
         display: block;
-        text-align:center;
+        text-align: center;
         background-color: #191919;
         border: 5px solid #979597;
         border-radius: 20px;
         padding-right: 10px;
     }
-    
-    .p-nombre-skill{
+
+    .p-nombre-skill {
         font-size: 1.3rem;
     }
-    
-    .p-nivel-skill{
+
+    .p-nivel-skill {
         font-size: 1rem;
     }
 
-    .b-porcentaje{
+    .b-porcentaje {
         display: none;
     }
-    progress{
+
+    progress {
         width: 80px;
         height: 25px;
     }
-    
+
 }
-
-
-
-

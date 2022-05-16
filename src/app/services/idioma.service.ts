@@ -8,7 +8,7 @@ import { Idioma } from '../model/idioma.model';
 })
 export class IdiomaService {
 
-  URL = "http://localhost:8080/api/persona/idioma/";
+  URL = "https://frozen-fjord-36122.herokuapp.com/api/persona/idioma/";
   constructor(private http: HttpClient) { }
 
   nuevaIdioma(idioma: Idioma): Observable<Idioma> {

@@ -1,15 +1,15 @@
-.container-educacion{
-    margin: 20px 20px 0px 20px ;
+.container-educacion {
+    margin: 20px 20px 0px 20px;
 }
 
-.col-educacion{
+.col-educacion {
     border-radius: 5px;
 }
 
-.vista-educacion{
+.vista-educacion {
     display: flex;
     flex-direction: row;
-    text-align:left;
+    text-align: left;
     margin-bottom: 5px;
     background-color: #191919;
     border: 1px solid #262626;
@@ -18,7 +18,7 @@
     justify-content: space-between;
 }
 
-.img-institucion{
+.img-institucion {
     object-fit: contain;
     max-width: 100px;
     margin-top: 50px;
@@ -27,7 +27,7 @@
 
 
 
-.app-educacion{
+.app-educacion {
     padding-top: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -35,10 +35,10 @@
 
 @media screen and (max-width: 768px) {
 
-    .vista-educacion{
+    .vista-educacion {
         display: flex;
         flex-direction: column;
         text-align: left;
     }
-    
+
 }

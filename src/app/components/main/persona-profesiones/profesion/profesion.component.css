@@ -1,5 +1,4 @@
-
-.profesion{
+.profesion {
     background-color: #191919;
     border: 1px solid #262626;
     border-radius: 5px;
@@ -9,7 +8,7 @@
     justify-content: space-between;
 }
 
-.profesion-title{
+.profesion-title {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -17,19 +16,19 @@
     padding: 10px 10px;
 }
 
-b{
+b {
     color: #179b76;
 }
 
 
-.profesion-button{
-    margin:auto;
+.profesion-button {
+    margin: auto;
 }
 
 
-button{
-    
-    color:#fff;
+button {
+
+    color: #fff;
     margin-right: 20px;
     margin-top: 10px;
     border: none;
@@ -39,9 +38,9 @@ button{
     font-weight: 500;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
 
-    .profesion{
+    .profesion {
         background-color: #191919;
         border: 1px solid #262626;
         border-radius: 5px;
@@ -51,7 +50,7 @@ button{
         flex-direction: column;
     }
 
-    .profesion-title{
+    .profesion-title {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;

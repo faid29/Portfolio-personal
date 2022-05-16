@@ -12,7 +12,7 @@ import { NuevoUsuario } from '../model/nuevoUsuario';
 
 export class AuthService {
 
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://frozen-fjord-36122.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

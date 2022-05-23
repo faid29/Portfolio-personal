@@ -10,12 +10,12 @@
 			<app-register-form></app-register-form>
 			<p>Tenés cuenta ?<b><a (click)="mostrarOcultar()" routerLink="/login"> {{tituloRegistro}} </a></b></p>
 		</div>
-		<a href="/home"><button type="button">Salir</button></a>
+		<a href="https://portafolio-rubensarco.web.app"><button type="button">Salir</button></a>
 	</div>
 	<div class="container" *ngIf="!isLogged">
 		<div class="col">
 			<h5>Bienvenido, ya iniciaste sesión</h5>
-			<a href="/home">Ir al Home<i class="bi bi-house-door-fill home-icon"></i></a>
+			<a href="https://portafolio-rubensarco.web.app">Ir al Home<i class="bi bi-house-door-fill home-icon"></i></a>
 			<button (click)="onLogOut()">Cerrar Sesión</button>
 		</div>
 	</div>

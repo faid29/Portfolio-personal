@@ -31,8 +31,6 @@ export class MainComponent implements OnInit {
 
   constructor( private personaService: PersonaService, private tokenService: TokenService ){
     this.getPersona()
-  
-
    }
 
   ngOnInit(): void {

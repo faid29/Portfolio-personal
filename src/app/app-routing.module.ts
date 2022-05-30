@@ -16,6 +16,7 @@ import { PersonaComponent } from './components/main/persona/persona.component';
 import { PersonaSoftsComponent } from './components/main/persona-softs/persona-softs.component';
 import { LoginGuard } from './guards/login.guard';
 import { ProdGuardService } from './guards/prod-guard.service';
+import { AcercaComponent } from './components/acerca/acerca.component';
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterFormComponent, canActivate: [LoginGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'contacto', component: ContactoComponent},
+  { path: 'acerca', component: AcercaComponent},
   { path: 'persona', component: PersonaComponent }, 
   { path: 'profesion', component: PersonaProfesionesComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },
   { path: 'laboral', component: PersonaLaboralesComponent, canActivate: [ProdGuardService], data: { expectedRol: ['admin', 'user'] } },

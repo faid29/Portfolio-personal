@@ -45,6 +45,7 @@ import { ContactoMensajeComponent } from './components/contacto/contacto-mensaje
 import { PersonaSoftsComponent } from './components/main/persona-softs/persona-softs.component';
 import { FormSoftComponent } from './components/main/persona-softs/form-soft/form-soft.component';
 import { SoftComponent } from './components/main/persona-softs/soft/soft.component';
+import { AcercaComponent } from './components/acerca/acerca.component';
 
 
 
@@ -89,6 +90,7 @@ import { SoftComponent } from './components/main/persona-softs/soft/soft.compone
     PersonaSoftsComponent,
     FormSoftComponent,
     SoftComponent,
+    AcercaComponent,
   ],
   imports: [
     BrowserModule,

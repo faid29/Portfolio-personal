@@ -1,0 +1,75 @@
+.acerca {
+    background-color: #191919;
+    color: #fff;
+    height: 90vh;
+}
+
+.acerca-col {
+    margin: 0px 50px;
+    padding-top: 30px;
+    height: auto;
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #179b76;
+}
+
+.row-title{
+    text-align: left;
+}
+
+.row-p{
+    position: relative;
+    margin-left: 25%;
+    padding-top: 50px;
+    text-align: center;
+    width: 50vw;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.p{
+    padding-top: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+button{
+    color: #fff;
+    margin-right: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #158668;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .row-p{
+        position: relative;
+        margin-left: 20px;
+        padding-top: 50px;
+        text-align: center;
+        width: 70vw;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .acerca {
+
+        height: 100vh;
+    }
+    
+    .p{
+        padding-top: 10px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+}

@@ -31,8 +31,16 @@
 
 .vista-profesion {
     align-content: center;
-    margin-top: 20px;
-    border-bottom: 1px solid #515152;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #515152;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.vista-profesion-h4{
+    padding-top: 20px;
 }
 
 .app-profesion {

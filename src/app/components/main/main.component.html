@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="grid-second" >
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PRFESION ::::::::::::::::::::::::::::::::::::::: -->
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::PROFESION ::::::::::::::::::::::::::::::::::::::: -->
         <div class="acerca" id="page-1">
             <div class="foto-perfil">
                 <div class="titulos-h5"><h5 id="page-1">{{persona.nombre}} {{persona.apellido}} </h5></div>
@@ -48,11 +48,12 @@
                         </div>
                     </div>
                 </div>
+<!--     ::::::::::::::::::::::::::::::::::::::::::::::::::::: AQUI TERMINA PERSONA ::::::::::::::::::::::::::::::::::::::: -->
             </div>
             <div class="informacion-profesional">
                 <div class="titulos-h5"><h5>Información profesional</h5></div>
                 <div class="vista-profesion" *ngFor="let profesion of persona.profesion">
-                    <h4>{{profesion.titulo_profesion}}</h4>
+                    <h4 class="vista-profesion-h4">{{profesion.titulo_profesion}}</h4>
                     <p><b></b>{{profesion.descripcion_profesion}}</p>
                 </div>
                 <div class="app-profesion" *ngIf="isAdmin" >
@@ -87,12 +88,13 @@
                     <div> 
                         <p class="p"><b>Institución: </b>{{educacion.nombre_institucion}} </p>
                         <p class="p"><b>Certificación: </b>{{educacion.nombre_certificacion}}</p>
-                        <p class="p"><b>Fecha inicio: </b>{{educacion.fecha_inicio}} <b>fecha fin: </b>{{educacion.fecha_fin}}</p>
+                        <p class="p"><b>Fecha Inicio: </b>{{educacion.fecha_inicio}}</p>
+                        <p class="p"><b>Fecha Finalización: </b>{{educacion.fecha_fin}}</p>
                         <p class="p"><b>Estado: </b>{{educacion.estado}}</p>
-                        <p class="p"><b>Descripcion: </b>{{educacion.descripcion_curso}}</p>                  
+                        <p class="p"><b>Descripción: </b>{{educacion.descripcion_curso}}</p>                  
                     </div>
                     <div img-div>
-                        <img class="img-institucion" src="{{educacion.imagen_institucion}}" alt="">
+                        <img class="img-institucion" src="{{educacion.imagen_institucion}}" alt="image-institucion">
                     </div>
                 </div>
             </div>
@@ -119,7 +121,7 @@
         </div>
 <!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::HARD SKILL ::::::::::::::::::::::::::::::::::::::: -->
         <div class="container-skill" id="page-5">
-            <div class="titulos-h5"><h5>Hard Skill</h5></div>
+            <div class="titulos-h5"><h5>Habilidades Técnicas</h5></div>
             <div class="col-skill">
                 <div class="vista-skill" *ngFor="let skill of persona.skill" [ngStyle]="{'border-color':skill.color_skill}">
                     <p class="p-nombre-skill">{{skill.nombre_skill}}</p>
@@ -135,7 +137,7 @@
         </div>
 <!--     :::::::::::::::::::::::::::::::::::::::::::::::::::::SOFT SKILL ::::::::::::::::::::::::::::::::::::::: -->
         <div class="container-soft" id="page-6">
-            <div class="titulos-h5"><h5>Soft Skill</h5></div>
+            <div class="titulos-h5"><h5>Habilidades Blandas</h5></div>
             <div class="col-soft">
                 <div class="vista-soft" *ngFor="let soft of persona.soft">
                     <p class="p-nombre-soft">{{soft.nombre}}</p>
@@ -156,7 +158,7 @@
                     <div>
                         <p class="p"><b>Proyecto: </b>{{proyecto.titulo_proyecto}} </p>
                         <p class="p"><b>Fecha: </b>{{proyecto.fecha_proyecto}}</p>
-                        <p class="p"><b>Descripcion: </b>{{proyecto.descripcion_proyecto}}</p>
+                        <p class="p"><b>Descripción: </b>{{proyecto.descripcion_proyecto}}</p>
                     </div>
                     <div id="slider">
                         <input type="radio" name="slider" id="slide1" checked>

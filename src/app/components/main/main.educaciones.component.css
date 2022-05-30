@@ -23,6 +23,7 @@
     max-width: 100px;
     margin-top: 50px;
     margin-right: 10px;
+    border-radius: 5px;
 }
 
 
@@ -39,6 +40,13 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+    }
+
+    
+    .img-institucion {
+       border-radius: 5px;
+       margin-left: 10px;
+       margin-bottom: 10px;
     }
 
 }
